@@ -33,4 +33,12 @@ public class CardClass : MonoBehaviour
             Cost_of_Card = Cost;
         }
     }
+
+    public class Special : CardClass
+    {
+        public Special(int Cost)
+        {
+            Cost_of_Card = Cost;
+        }
+    }
 }
