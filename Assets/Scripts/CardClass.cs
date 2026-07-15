@@ -4,7 +4,7 @@ public class CardClass : MonoBehaviour
 {
     public enum Conditions 
     {
-        none, No_Attack
+        none, No_Attack, No_Defends
     }
     public string Name_Of_Card;
     public int Cost_of_Card;
@@ -26,19 +26,23 @@ public class CardClass : MonoBehaviour
     public class Defence : CardClass
     {
         public int Defence_Value;
+        public Conditions card_condition;
 
-        public Defence(int Def, int Cost)
+        public Defence(int Def, int Cost, Conditions con)
         {
             Defence_Value = Def; 
             Cost_of_Card = Cost;
+            card_condition = con;
         }
     }
 
     public class Special : CardClass
     {
-        public Special(int Cost)
+        public Conditions card_condition;
+        public Special(int Cost, Conditions con)
         {
             Cost_of_Card = Cost;
+            card_condition = con;
         }
     }
 }
