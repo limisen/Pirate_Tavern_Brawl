@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9199338113175284503}
   - component: {fileID: 1963932286532109460}
   - component: {fileID: 4752992888951725147}
+  - component: {fileID: 1575987834412184288}
   m_Layer: 0
   m_Name: Middle_Card
   m_TagString: Untagged
@@ -152,6 +153,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ce7d29be4fadd44b03a4b747c7c07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnMouseHover
+--- !u!114 &1575987834412184288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821993898375347850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506e35bdd54ad8c468685c09db484610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardPicker
 --- !u!1 &3354360964917797882
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +177,7 @@ GameObject:
   - component: {fileID: 2739420923057685657}
   - component: {fileID: 3452813327624946869}
   - component: {fileID: 5372714006812685152}
+  - component: {fileID: 8767769347357262745}
   m_Layer: 0
   m_Name: Left_Card
   m_TagString: Untagged
@@ -304,6 +318,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ce7d29be4fadd44b03a4b747c7c07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnMouseHover
+--- !u!114 &8767769347357262745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354360964917797882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506e35bdd54ad8c468685c09db484610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardPicker
 --- !u!1 &5041280922038279444
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +342,7 @@ GameObject:
   - component: {fileID: 1425726411840028366}
   - component: {fileID: 2369012414987740267}
   - component: {fileID: 7151191826661690572}
+  - component: {fileID: 9071967195565415849}
   m_Layer: 0
   m_Name: Right_Card
   m_TagString: Untagged
@@ -456,6 +483,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ce7d29be4fadd44b03a4b747c7c07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnMouseHover
+--- !u!114 &9071967195565415849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041280922038279444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506e35bdd54ad8c468685c09db484610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardPicker
 --- !u!1 &8294736854852228707
 GameObject:
   m_ObjectHideFlags: 0
