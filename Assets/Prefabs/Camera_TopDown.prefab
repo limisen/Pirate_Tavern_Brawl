@@ -150,3 +150,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74763160896f32846b179af4840c912c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSwitch
+  camera_self: {fileID: 8095731871803500072}
+  camera_other: {fileID: 4753281288872823841, guid: c7b02df7d6775db4d890cfa065ee9c97, type: 3}
