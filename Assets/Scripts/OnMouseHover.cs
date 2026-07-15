@@ -48,7 +48,9 @@ public class OnMouseHover : MonoBehaviour
 
             gameObject.transform.localScale = new Vector3(1.5f, 1.0f, 1);
             gameObject.transform.localPosition = new Vector3(0, 0.34f, 0);
-            //gameObject.transform.localRotation = Quaternion.identity;
+            gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            
+
         }
         else if (onCard == false)
         {
