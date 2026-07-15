@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 33c9bf8ca35582c469618a2690f8c45a
+guid: 277e935afce47614884701a626d52cc4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 304
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,23 +110,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_sprite-0005_0
+      name: CoinSprite-TopDown_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1130
-        height: 1176
+        width: 80
+        height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 305ab4cabb7949947bbb36ee79508370
-      internalID: -1457566712
+      spriteID: 108b150254d4867499506f3258a75afe
+      internalID: -573849608
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 87f3369ef773938428908bac3f05c770
+    spriteID: 8d8bb15fc3fe3534e9aa682a3ac62e68
     internalID: 0
     vertices: []
     indices: 
@@ -145,7 +145,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Character_sprite-0005_0: -1457566712
+      CoinSprite-TopDown_0: -573849608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
