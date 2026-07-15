@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void SwitchCamera(Camera cam)
     {
-        
-    }
+        if (cam.name == "Camera_TableView")
+        {
+            
+        } else if (cam.name == "Camera_TopDown")
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }
