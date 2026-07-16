@@ -4,6 +4,7 @@ public class CameraSwitch : MonoBehaviour
 {
     [SerializeField] Camera camera_self;
     [SerializeField] Camera camera_other;
+
     public void SwitchToCameraFromCamera(Camera camera_self, Camera camera_other)
     {
         if (camera_self.enabled == true)
