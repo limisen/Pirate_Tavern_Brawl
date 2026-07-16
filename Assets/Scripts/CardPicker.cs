@@ -21,7 +21,7 @@ public class CardPicker : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(0.3f, 0.3f, 1);
             gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            gameObject.transform.localPosition = cam.ScreenToWorldPoint(new Vector3((Mouse.current.position.ReadValue().x - 20), (Mouse.current.position.ReadValue().y + 350), 11));
+            gameObject.transform.localPosition = cam.ScreenToWorldPoint(new Vector3((Mouse.current.position.ReadValue().x - 35), (Mouse.current.position.ReadValue().y + 350), 11));
         }
     }
 
@@ -49,7 +49,7 @@ public class CardPicker : MonoBehaviour
         if (onCardSelect == true)
         {
             gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            gameObject.transform.localPosition = cam.ScreenToWorldPoint(new Vector3((Mouse.current.position.ReadValue().x - 20), (Mouse.current.position.ReadValue().y + 350), 11));
+            gameObject.transform.localPosition = cam.ScreenToWorldPoint(new Vector3((Mouse.current.position.ReadValue().x - 35), (Mouse.current.position.ReadValue().y + 350), 11));
         }
         else if (onCardSelect == false)
         {
