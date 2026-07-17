@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89051c3f4af04b445a005e13820cb0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  coins_Available: 0
+  costs_Of_Card: 0
+  player_HP: 0
+  opponent_HP: 0
 --- !u!114 &2877074336465861282
 MonoBehaviour:
   m_ObjectHideFlags: 0
