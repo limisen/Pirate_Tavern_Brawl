@@ -15,7 +15,7 @@ public class CardClass : MonoBehaviour
     public class Attack : CardClass
     {
         public int Damage;
-
+        
         public Attack(int DMG, int Cost, Conditions con)
         {
             Damage = DMG; 

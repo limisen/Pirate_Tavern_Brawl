@@ -311,10 +311,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1838613311}
     m_Modifications:
-    - target: {fileID: 1425726411840028366, guid: 1574c3a8bd398f44fb134ad1a0a8939a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2163254360880809166, guid: 1574c3a8bd398f44fb134ad1a0a8939a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.24871
@@ -355,10 +351,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2739420923057685657, guid: 1574c3a8bd398f44fb134ad1a0a8939a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4674856940312553542, guid: 1574c3a8bd398f44fb134ad1a0a8939a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -366,10 +358,6 @@ PrefabInstance:
     - target: {fileID: 8294736854852228707, guid: 1574c3a8bd398f44fb134ad1a0a8939a, type: 3}
       propertyPath: m_Name
       value: Player_Hand
-      objectReference: {fileID: 0}
-    - target: {fileID: 9199338113175284503, guid: 1574c3a8bd398f44fb134ad1a0a8939a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
