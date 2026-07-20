@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 8481565335310500895}
   - component: {fileID: 9199338113175284503}
   - component: {fileID: 1963932286532109460}
-  - component: {fileID: 4752992888951725147}
-  - component: {fileID: 1575987834412184288}
+  - component: {fileID: 491724373381533251}
   m_Layer: 0
   m_Name: Middle_Card
   m_TagString: Untagged
@@ -82,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 867309792, guid: 7547161a4490fb64b8b62d0f4af505b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -141,7 +140,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 7.5}
   m_EdgeRadius: 0
---- !u!114 &4752992888951725147
+--- !u!114 &491724373381533251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,21 +149,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 821993898375347850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ce7d29be4fadd44b03a4b747c7c07a, type: 3}
+  m_Script: {fileID: 11500000, guid: ded69ec8de0c34545baee1dfc51497bb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnMouseHover
---- !u!114 &1575987834412184288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821993898375347850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 506e35bdd54ad8c468685c09db484610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardPicker
+  m_EditorClassIdentifier: Assembly-CSharp::CardInteract
 --- !u!1 &3354360964917797882
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,8 +163,7 @@ GameObject:
   - component: {fileID: 4003613984172505215}
   - component: {fileID: 2739420923057685657}
   - component: {fileID: 3452813327624946869}
-  - component: {fileID: 5372714006812685152}
-  - component: {fileID: 8767769347357262745}
+  - component: {fileID: 4817499501541510765}
   m_Layer: 0
   m_Name: Left_Card
   m_TagString: Untagged
@@ -247,7 +233,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 867309792, guid: 7547161a4490fb64b8b62d0f4af505b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -306,7 +292,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 7.5}
   m_EdgeRadius: 0
---- !u!114 &5372714006812685152
+--- !u!114 &4817499501541510765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,21 +301,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3354360964917797882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ce7d29be4fadd44b03a4b747c7c07a, type: 3}
+  m_Script: {fileID: 11500000, guid: ded69ec8de0c34545baee1dfc51497bb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnMouseHover
---- !u!114 &8767769347357262745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3354360964917797882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 506e35bdd54ad8c468685c09db484610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardPicker
+  m_EditorClassIdentifier: Assembly-CSharp::CardInteract
 --- !u!1 &5041280922038279444
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,8 +315,7 @@ GameObject:
   - component: {fileID: 4674856940312553542}
   - component: {fileID: 1425726411840028366}
   - component: {fileID: 2369012414987740267}
-  - component: {fileID: 7151191826661690572}
-  - component: {fileID: 9071967195565415849}
+  - component: {fileID: 1713681117213813574}
   m_Layer: 0
   m_Name: Right_Card
   m_TagString: Untagged
@@ -359,7 +332,7 @@ Transform:
   m_GameObject: {fileID: 5041280922038279444}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.13121834, w: 0.9913535}
-  m_LocalPosition: {x: 1.36, y: 0, z: 0.1}
+  m_LocalPosition: {x: 1.36, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -412,7 +385,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 867309792, guid: 7547161a4490fb64b8b62d0f4af505b7, type: 3}
   m_Color: {r: 0.852, g: 0.852, b: 0.852, a: 1}
@@ -471,7 +444,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 7.5}
   m_EdgeRadius: 0
---- !u!114 &7151191826661690572
+--- !u!114 &1713681117213813574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -480,21 +453,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5041280922038279444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ce7d29be4fadd44b03a4b747c7c07a, type: 3}
+  m_Script: {fileID: 11500000, guid: ded69ec8de0c34545baee1dfc51497bb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnMouseHover
---- !u!114 &9071967195565415849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5041280922038279444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 506e35bdd54ad8c468685c09db484610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardPicker
+  m_EditorClassIdentifier: Assembly-CSharp::CardInteract
 --- !u!1 &8294736854852228707
 GameObject:
   m_ObjectHideFlags: 0
