@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 3452813327624946869}
   - component: {fileID: 4817499501541510765}
   - component: {fileID: 3777005986593984546}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left_Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 2369012414987740267}
   - component: {fileID: 1713681117213813574}
   - component: {fileID: 7674890567224874059}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right_Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
