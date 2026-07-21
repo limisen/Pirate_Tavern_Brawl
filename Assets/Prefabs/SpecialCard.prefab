@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3061604035254854522}
   - component: {fileID: 4030367701651204525}
   - component: {fileID: 2980908177486935379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpecialCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded69ec8de0c34545baee1dfc51497bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardInteract
+  is_in_playbox: 0
 --- !u!114 &2980908177486935379
 MonoBehaviour:
   m_ObjectHideFlags: 0
