@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 867309792, guid: 7547161a4490fb64b8b62d0f4af505b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackCard
   Name_Of_Card: 
   Cost_of_Card: 0
-  Card_Description: 
   Card_Portrait: {fileID: 0}
+  Card_Description: 
   condition: 0
   Damage: 0

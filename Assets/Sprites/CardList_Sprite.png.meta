@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9aa03cba7df8d4f4aa5624bc91fbb006
+guid: 98f1ace4b60660443846803b91cafeda
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 128
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: test_list_0
+      name: CardList_Sprite_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,15 +118,15 @@ TextureImporter:
         width: 960
         height: 1280
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86d2cfc58fef675498d9f93bb669db65
-      internalID: 1083651545
+      spriteID: 88befbd9d4309504f8f9d1543351f5af
+      internalID: 1028631973
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c09ee48989ce3924394869124703087b
+    spriteID: f95ce2231757e2547966faab7dffad0a
     internalID: 0
     vertices: []
     indices: 
@@ -143,13 +143,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceOnImport
-        value: False
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      test_list_0: 1083651545
+      CardList_Sprite_0: 1028631973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

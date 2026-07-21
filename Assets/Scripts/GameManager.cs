@@ -1,13 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 using static CardClass;
 
 public class GameManager : MonoBehaviour
 {
     GameLoop Encounter_Loop;
-    [SerializeField] GameObject ParentObject;
+    [SerializeField] public GameObject ParentObject;
     [SerializeField] GameObject AttackCardPrefab;
     [SerializeField] GameObject DefenceCardPrefab;
     [SerializeField] GameObject SpecialCardPrefab;
+
+    GameLoop gameLoop;
 
     public int coins_Available = 50;
     public int costs_Of_Card = 3;
@@ -16,17 +19,32 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        gameLoop  = GetComponent<GameLoop>();
+
         // start of Encounter
         coins_Available = 50; 
         costs_Of_Card = 3;
         player_HP = 30;
         opponent_HP = 30;
         // Create the list of cards
-        for (int i = 0; i < 8; i++)
+
+        var positionsOnListOfCards = new Dictionary<int, Vector3>
         {
-            if (i <= 2)
+            [1] = new Vector3(0.56f, 0.47f, 0),
+            [2] = new Vector3(2.7f, 0.47f, 0),
+            [3] = new Vector3(4.82f, 0.47f, 0),
+            [4] = new Vector3(0.6f, -2.5f, 0),
+            [5] = new Vector3(2.67f, -2.57f, 0),
+            [6] = new Vector3(4.77f, -2.52f, 0),
+            [7] = new Vector3(0.6f, -5.44f, 0),
+            [8] = new Vector3(2.7f, -5.48f, 0),
+        };
+
+        for (int i = 1; i < 9; i++)
+        {
+            if (i <= 3)
             {
-                GameObject Card = Instantiate(AttackCardPrefab,ParentObject.transform);
+                GameObject Card = Instantiate(AttackCardPrefab, positionsOnListOfCards[i], ParentObject.transform.rotation, ParentObject.transform);
 
                 AttackCard attackCard = Card.GetComponent<AttackCard>();
                 attackCard.Name_Of_Card = "Attack_Card_" + i.ToString();
@@ -42,9 +60,9 @@ public class GameManager : MonoBehaviour
 
                 attackCard.condition = Conditions.none;
             }
-            else if (i > 2 && i <= 5)
+            else if (i > 3 && i <= 6)
             {
-                GameObject Card = Instantiate(DefenceCardPrefab,ParentObject.transform);
+                GameObject Card = Instantiate(DefenceCardPrefab, positionsOnListOfCards[i], ParentObject.transform.rotation, ParentObject.transform);
 
                 DefenceCard defenceCard = Card.GetComponent<DefenceCard>();
                 defenceCard.Name_Of_Card = "Defence_Card_" + i.ToString();
@@ -58,9 +76,9 @@ public class GameManager : MonoBehaviour
 
                 defenceCard.condition = Conditions.none;
             }
-            else if (i > 5 && i <= 8)
+            else if (i > 6 && i <= 9)
             {
-                GameObject Card = Instantiate(SpecialCardPrefab,ParentObject.transform);
+                GameObject Card = Instantiate(SpecialCardPrefab, positionsOnListOfCards[i], ParentObject.transform.rotation, ParentObject.transform);
 
                 SpecialCard specialCard = Card.GetComponent<SpecialCard>();
                 specialCard.Name_Of_Card = "Special_Card_" + i.ToString();
@@ -73,5 +91,7 @@ public class GameManager : MonoBehaviour
                 specialCard.condition = Conditions.No_Attacks;
             }
         }
+
+            gameLoop.GameLoop_Method();
     }
 }
