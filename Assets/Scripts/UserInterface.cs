@@ -13,14 +13,14 @@ public class UserInterface : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
-        player_health_counter.text = gameManager.player_HP.ToString();
-        coins.text = gameManager.coins_Available.ToString();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void UpdatdeUIText()
     {
-
+        coins.text = gameManager.coins_Available.ToString();
+        player_health_counter.text = gameManager.player_HP.ToString();
     }
 
 }

@@ -3,12 +3,13 @@ using UnityEngine;
 public class GameLoop : MonoBehaviour
 {
     GameManager gameManager;
+    UserInterface userInterface;
     private void Start()
     {
        gameManager  = GetComponent<GameManager>();
-        
+       userInterface = FindAnyObjectByType<UserInterface>();
     }
-    
+
     public void GameLoop_Method()
     {
         if (gameManager.player_HP >= 1 | gameManager.opponent_HP >= 1)
@@ -29,6 +30,7 @@ public class GameLoop : MonoBehaviour
                 // return to star
                 //continue to upgrades
 
+            userInterface.UpdatdeUIText();
             //done
         }
     }

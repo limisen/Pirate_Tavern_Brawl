@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1376277031861254893}
   - component: {fileID: 8270989896927210423}
   - component: {fileID: 347622310733499331}
-  - component: {fileID: 7680816919743995389}
   m_Layer: 5
   m_Name: Coin_purse
   m_TagString: Untagged
@@ -99,21 +98,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7680816919743995389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904402670513245281}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea71fc8786ae7047918f86301476a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UserInterface
-  coins: {fileID: 0}
-  player_health_counter: {fileID: 0}
-  purse: {fileID: 0}
 --- !u!1 &3092985236204957794
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +109,6 @@ GameObject:
   - component: {fileID: 915559754984523169}
   - component: {fileID: 5131571142986313056}
   - component: {fileID: 324286886214653448}
-  - component: {fileID: 1002694854577571416}
   m_Layer: 5
   m_Name: Coin_count_display
   m_TagString: Untagged
@@ -194,21 +177,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
---- !u!114 &1002694854577571416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3092985236204957794}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea71fc8786ae7047918f86301476a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UserInterface
-  coins: {fileID: 0}
-  player_health_counter: {fileID: 0}
-  purse: {fileID: 0}
 --- !u!1 &5299481274044917755
 GameObject:
   m_ObjectHideFlags: 0
