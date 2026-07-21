@@ -3495,26 +3495,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &1376912800 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5299481274044917755, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-  m_PrefabInstance: {fileID: 6067966595631162950}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1376912805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376912800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea71fc8786ae7047918f86301476a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UserInterface
-  coins: {fileID: 0}
-  player_health_counter: {fileID: 0}
-  purse: {fileID: 0}
 --- !u!1 &1505210113
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,10 +4187,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 5510578735743395556, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5299481274044917755, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1376912805}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
 --- !u!1001 &6660803172028863197
 PrefabInstance:
