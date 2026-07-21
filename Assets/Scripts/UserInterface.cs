@@ -22,5 +22,4 @@ public class UserInterface : MonoBehaviour
         coins.text = gameManager.coins_Available.ToString();
         player_health_counter.text = gameManager.player_HP.ToString();
     }
-
 }

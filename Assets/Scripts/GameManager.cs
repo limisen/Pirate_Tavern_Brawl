@@ -48,7 +48,8 @@ public class GameManager : MonoBehaviour
         {
             if (i <= 3)
             {
-                GameObject Card = Instantiate(AttackCardPrefab, positionsOnListOfCards[i], ParentObject.transform.rotation, ParentObject.transform);
+                GameObject Card = Instantiate(AttackCardPrefab, ParentObject.transform);
+                Card.transform.localPosition = positionsOnListOfCards[i];
 
                 AttackCard attackCard = Card.GetComponent<AttackCard>();
                 attackCard.Name_Of_Card = "Attack_Card_" + i.ToString();
@@ -66,7 +67,8 @@ public class GameManager : MonoBehaviour
             }
             else if (i > 3 && i <= 6)
             {
-                GameObject Card = Instantiate(DefenceCardPrefab, positionsOnListOfCards[i], ParentObject.transform.rotation, ParentObject.transform);
+                GameObject Card = Instantiate(DefenceCardPrefab, ParentObject.transform);
+                Card.transform.localPosition = positionsOnListOfCards[i];
 
                 DefenceCard defenceCard = Card.GetComponent<DefenceCard>();
                 defenceCard.Name_Of_Card = "Defence_Card_" + i.ToString();
@@ -82,7 +84,8 @@ public class GameManager : MonoBehaviour
             }
             else if (i > 6 && i <= 9)
             {
-                GameObject Card = Instantiate(SpecialCardPrefab, positionsOnListOfCards[i], ParentObject.transform.rotation, ParentObject.transform);
+                GameObject Card = Instantiate(SpecialCardPrefab, ParentObject.transform);
+                Card.transform.localPosition = positionsOnListOfCards[i];
 
                 SpecialCard specialCard = Card.GetComponent<SpecialCard>();
                 specialCard.Name_Of_Card = "Special_Card_" + i.ToString();
