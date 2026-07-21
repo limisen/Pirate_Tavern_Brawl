@@ -10,6 +10,8 @@ public class CardInteract : MonoBehaviour
     private Quaternion startLocalRotation;
     private int cardRendererStartingValue;
 
+    public bool is_in_playbox = false;
+
     private Renderer cardRenderer;
     private Camera cam;
 
@@ -73,6 +75,12 @@ public class CardInteract : MonoBehaviour
             gameObject.transform.localPosition = new Vector3(0, 2.5f, 0);
             cardRenderer.sortingOrder = 100;
         }
+        else if (CardSelected == false && is_in_playbox)
+        {
+            is_in_playbox = true;
+            Debug.Log("kortet spelades");
+            
+        }
         else if (CardSelected == false || onCard == false) // if we arent hovering over a card or holding down M1 on it, return it to the scale, rotation and position it was at the start.
         {
             gameObject.transform.localScale = startLocalScale;
@@ -80,5 +88,8 @@ public class CardInteract : MonoBehaviour
             gameObject.transform.localPosition = startLocalPosition;
             cardRenderer.sortingOrder = cardRendererStartingValue;
         }
+
+
+        }
     }
-}
+
