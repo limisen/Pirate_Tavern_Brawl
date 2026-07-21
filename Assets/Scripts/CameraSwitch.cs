@@ -11,7 +11,8 @@ public class CameraSwitch : MonoBehaviour
         {
             camera_other.enabled = true;
             camera_self.enabled = false;
-        } else if (camera_self.enabled == false)
+        }
+        else if (camera_self.enabled == false)
         {
             camera_self.enabled = true;
             camera_other.enabled = false;

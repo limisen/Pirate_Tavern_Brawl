@@ -1,4 +1,3 @@
-using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,16 +5,16 @@ public class CardInteract : MonoBehaviour
 {
     private bool CardSelected = false;
     private bool onCard = false;
+    public bool is_in_playbox = false;
+
     private Vector3 startLocalScale;
     private Vector3 startLocalPosition;
     private Quaternion startLocalRotation;
     private int cardRendererStartingValue;
 
-    public bool is_in_playbox = false;
-
-
     private Renderer cardRenderer;
     private Camera cam;
+
     GameManager gameManager;
 
     private void Start()
@@ -62,7 +61,6 @@ public class CardInteract : MonoBehaviour
             cardManipulation();                        // if we are holding down M1 then move the card along with the mouse
         }
     }
-
     void cardManipulation()
     {
         if (CardSelected == true)     // If we are holding down M1, rotate the card upright then move it along with the mouse
@@ -87,7 +85,6 @@ public class CardInteract : MonoBehaviour
             gameManager.chosen_Cards.Add(this);
             Debug.Log(gameManager.name);
             Debug.Log("array: " + gameManager.chosen_Cards);
-
         }
         else if (CardSelected == false || onCard == false) // if we arent hovering over a card or holding down M1 on it, return it to the scale, rotation and position it was at the start.
         {
@@ -96,6 +93,5 @@ public class CardInteract : MonoBehaviour
             gameObject.transform.localPosition = startLocalPosition;
             cardRenderer.sortingOrder = cardRendererStartingValue;
         }
-        }
     }
-
+}

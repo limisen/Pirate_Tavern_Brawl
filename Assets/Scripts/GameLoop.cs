@@ -6,15 +6,15 @@ public class GameLoop : MonoBehaviour
     UserInterface userInterface;
     private void Start()
     {
-       gameManager  = GetComponent<GameManager>();
-       userInterface = FindAnyObjectByType<UserInterface>();
+        gameManager = GetComponent<GameManager>();
+        userInterface = FindAnyObjectByType<UserInterface>();
     }
 
     public void GameLoop_Method()
     {
         if (gameManager.player_HP >= 1 | gameManager.opponent_HP >= 1)
         {
-           // switch camera
+            // switch camera
 
             // väljer kort etc att spela
 
@@ -27,10 +27,13 @@ public class GameLoop : MonoBehaviour
             // calculate result of cards played + show player
 
             // check hp if less than 0
-                // return to star
-                //continue to upgrades
 
             userInterface.UpdatdeUIText();
+
+            //      return to star
+            //      or
+            //      continue to upgrades
+
             //done
         }
     }

@@ -4,29 +4,28 @@ using static CardClass;
 
 public class GameManager : MonoBehaviour
 {
-
-    public List<CardInteract> chosen_Cards = new List<CardInteract>();
-     
-
+    GameLoop gameLoop;
     GameLoop Encounter_Loop;
+
     [SerializeField] public GameObject ParentObject;
+
     [SerializeField] GameObject AttackCardPrefab;
     [SerializeField] GameObject DefenceCardPrefab;
     [SerializeField] GameObject SpecialCardPrefab;
-
-    GameLoop gameLoop;
 
     public int coins_Available = 50;
     public int costs_Of_Card = 3;
     public int player_HP = 30;
     public int opponent_HP = 30;
 
+    public List<CardInteract> chosen_Cards = new List<CardInteract>();
+
     private void Start()
     {
-        gameLoop  = GetComponent<GameLoop>();
+        gameLoop = GetComponent<GameLoop>();
 
         // start of Encounter
-        coins_Available = 50; 
+        coins_Available = 50;
         costs_Of_Card = 3;
         player_HP = 30;
         opponent_HP = 30;
@@ -61,7 +60,7 @@ public class GameManager : MonoBehaviour
 
                 attackCard.Card_Description = "blabla bla";
 
-                attackCard.Damage = Random.Range(1,4);
+                attackCard.Damage = Random.Range(1, 4);
 
                 attackCard.condition = Conditions.none;
             }
@@ -99,6 +98,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-            gameLoop.GameLoop_Method();
+        gameLoop.GameLoop_Method();
     }
 }
