@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,8 +13,10 @@ public class CardInteract : MonoBehaviour
 
     public bool is_in_playbox = false;
 
+
     private Renderer cardRenderer;
     private Camera cam;
+    GameManager gameManager;
 
     private void Start()
     {
@@ -24,6 +27,7 @@ public class CardInteract : MonoBehaviour
 
         cardRenderer = GetComponent<SpriteRenderer>();
         cardRendererStartingValue = cardRenderer.sortingOrder;
+        gameManager = FindAnyObjectByType<GameManager>();
     }
     void OnMouseDown()
     {
@@ -79,7 +83,11 @@ public class CardInteract : MonoBehaviour
         {
             is_in_playbox = true;
             Debug.Log("kortet spelades");
-            
+            Debug.Log(gameObject.name);
+            gameManager.chosen_Cards.Add(this);
+            Debug.Log(gameManager.name);
+            Debug.Log("array: " + gameManager.chosen_Cards);
+
         }
         else if (CardSelected == false || onCard == false) // if we arent hovering over a card or holding down M1 on it, return it to the scale, rotation and position it was at the start.
         {

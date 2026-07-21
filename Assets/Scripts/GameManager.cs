@@ -4,6 +4,10 @@ using static CardClass;
 
 public class GameManager : MonoBehaviour
 {
+
+    public List<CardInteract> chosen_Cards = new List<CardInteract>();
+     
+
     GameLoop Encounter_Loop;
     [SerializeField] public GameObject ParentObject;
     [SerializeField] GameObject AttackCardPrefab;
