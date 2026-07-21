@@ -4,10 +4,12 @@ public class GameLoop : MonoBehaviour
 {
     GameManager gameManager;
     UserInterface userInterface;
+    CameraSwitch cameraSwitch;
     private void Start()
     {
         gameManager = GetComponent<GameManager>();
         userInterface = FindAnyObjectByType<UserInterface>();
+        cameraSwitch = FindAnyObjectByType<CameraSwitch>();
     }
 
     public void GameLoop_Method()
@@ -15,6 +17,7 @@ public class GameLoop : MonoBehaviour
         if (gameManager.player_HP >= 1 | gameManager.opponent_HP >= 1)
         {
             // switch camera
+            cameraSwitch.SwitchToCamera("TableView");
 
             // väljer kort etc att spela
 
@@ -23,6 +26,7 @@ public class GameLoop : MonoBehaviour
             // opponent väljer kort
 
             // switch camera
+            cameraSwitch.SwitchToCamera("TopDown");
 
             // calculate result of cards played + show player
 

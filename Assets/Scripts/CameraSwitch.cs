@@ -2,20 +2,32 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-    [SerializeField] Camera camera_self;
-    [SerializeField] Camera camera_other;
+    [SerializeField] Camera camera_TableView;
+    [SerializeField] Camera camera_TopDown;
+    [SerializeField] Camera camera_BarView;
 
-    public void SwitchToCameraFromCamera(Camera camera_self, Camera camera_other)
+    public void SwitchToCamera(string CameraToSwitchTo = "TableView")
     {
-        if (camera_self.enabled == true)
+        if (CameraToSwitchTo == "TableView")
         {
-            camera_other.enabled = true;
-            camera_self.enabled = false;
+            camera_TopDown.enabled = false;
+            camera_BarView.enabled = false;
+
+            camera_TableView.enabled = true;
         }
-        else if (camera_self.enabled == false)
+        else if (CameraToSwitchTo == "TopDown")
         {
-            camera_self.enabled = true;
-            camera_other.enabled = false;
+            camera_TableView.enabled = false;
+            camera_BarView.enabled = false;
+
+            camera_TopDown.enabled = true;
+        }
+        else if (CameraToSwitchTo == "BarView")
+        {
+            camera_TopDown.enabled = false;
+            camera_BarView.enabled = false;
+
+            camera_BarView.enabled = true;
         }
     }
 }

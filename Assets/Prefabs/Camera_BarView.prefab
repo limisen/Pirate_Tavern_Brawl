@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 4753281288872823841}
   - component: {fileID: 8775806861844599108}
   m_Layer: 0
-  m_Name: Camera_TableView
+  m_Name: Camera_BarView
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4305666018372777073
 Transform:
   m_ObjectHideFlags: 0

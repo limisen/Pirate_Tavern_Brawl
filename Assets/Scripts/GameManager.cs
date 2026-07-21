@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static CardClass;
 
 public class GameManager : MonoBehaviour
 {
     GameLoop gameLoop;
     GameLoop Encounter_Loop;
+    CameraSwitch cameraSwitch;
 
     [SerializeField] public GameObject ParentObject;
 
@@ -18,10 +20,11 @@ public class GameManager : MonoBehaviour
     public int player_HP = 30;
     public int opponent_HP = 30;
 
-    public List<CardInteract> chosen_Cards = new List<CardInteract>();
+    public List<CardInteract> chosen_Cards = new();
 
     private void Start()
     {
+        cameraSwitch = FindAnyObjectByType<CameraSwitch>();
         gameLoop = GetComponent<GameLoop>();
 
         // start of Encounter
@@ -29,8 +32,8 @@ public class GameManager : MonoBehaviour
         costs_Of_Card = 3;
         player_HP = 30;
         opponent_HP = 30;
-        // Create the list of cards
 
+        // List of positons on the card list for where the cards will be instantiated
         var positionsOnListOfCards = new Dictionary<int, Vector3>
         {
             [1] = new Vector3(0.56f, 0.47f, 0),
@@ -43,6 +46,7 @@ public class GameManager : MonoBehaviour
             [8] = new Vector3(2.7f, -5.48f, 0),
         };
 
+        // Create the list of cards
         for (int i = 1; i < 9; i++)
         {
             if (i <= 3)
@@ -97,7 +101,9 @@ public class GameManager : MonoBehaviour
                 specialCard.condition = Conditions.No_Attacks;
             }
         }
-
         gameLoop.GameLoop_Method();
+
+        cameraSwitch.SwitchToCamera("BarView");
+
     }
 }
