@@ -20,9 +20,10 @@ public class CardInteract : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;                              // Define the camera we are viewing through
-        startLocalScale = transform.localScale;         // Set the starting values so we have something to return to after manipulating the cards
-        startLocalPosition = transform.localPosition;
-        startLocalRotation = transform.localRotation;
+
+        startLocalScale = transform.localScale;         // /-
+        startLocalPosition = transform.localPosition;   // Set the starting values so we have something to return to after manipulating the cards
+        startLocalRotation = transform.localRotation;   // -/
 
         cardRenderer = GetComponent<SpriteRenderer>();
         cardRendererStartingValue = cardRenderer.sortingOrder;

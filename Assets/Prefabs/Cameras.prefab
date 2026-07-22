@@ -58,7 +58,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraSwitch
   camera_TableView: {fileID: 9115876838469084311}
   camera_TopDown: {fileID: 6958215846208137344}
-  camera_BarView: {fileID: 0}
+  camera_BarView: {fileID: 9125571858521112065}
 --- !u!1001 &1209600558745063080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3525143740177977381, guid: fc1e592dcdcef4c43a57d7d03caa4aae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5342202998284095184, guid: fc1e592dcdcef4c43a57d7d03caa4aae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2621628502228974646, guid: 957e2d1fa7efc92499ca27a99db61766, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4305666018372777073, guid: 957e2d1fa7efc92499ca27a99db61766, type: 3}
       propertyPath: m_LocalPosition.x
@@ -194,6 +194,11 @@ PrefabInstance:
 --- !u!4 &329689704471545425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4305666018372777073, guid: 957e2d1fa7efc92499ca27a99db61766, type: 3}
+  m_PrefabInstance: {fileID: 4563139712964178464}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &9125571858521112065 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4753281288872823841, guid: 957e2d1fa7efc92499ca27a99db61766, type: 3}
   m_PrefabInstance: {fileID: 4563139712964178464}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4572584679952066742
