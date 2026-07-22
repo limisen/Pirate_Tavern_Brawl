@@ -11,35 +11,40 @@ public class GameLoop : MonoBehaviour
         gameManager = GetComponent<GameManager>();
         userInterface = FindAnyObjectByType<UserInterface>();
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
-        playerReadyScript = FindAnyObjectByType<PlayerReady>();
+        playerReadyScript = GetComponent<PlayerReady>();
     }
 
     public void GameLoop_Method()
     {
         if (gameManager.player_HP >= 1 | gameManager.opponent_HP >= 1)
         {
-            // switch camera
-            cameraSwitch.SwitchToCamera("TableView");
-            //gameManager.player_Ready = false;
-
             // väljer kort etc att spela
 
             // confirm cards to be played
             playerReadyScript.PlayerReady_Method();
-
-            //cameraSwitch.SwitchToCamera("TopDown");
+            if (gameManager.player_Ready == true)
+            {
+                Debug.Log("Changing Camera To TopDown");
+                cameraSwitch.SwitchToCamera("TopDown");
+            }
 
             // calculate result of cards played + show player
 
-            // check hp if less than 0
-
-            userInterface.UpdatdeUIText();
-
-            //      return to star
-            //      or
-            //      continue to upgrades
-
-            //done
+            for (int i = 0; i < gameManager.chosen_Cards.Count; i++)
+            {
+                //if (gameManager.chosen_Cards[i].name.Contains("Attack_Card"))
+                //{
+                //    gameManager.chosen_Cards[i];
+                //}
+                //else if(gameManager.chosen_Cards[i].name.Contains("Defence_Card"))
+                //{
+                //    gameManager.chosen_Cards[i];
+                //}
+                //else if (gameManager.chosen_Cards[i].name.Contains("Special_Card"))
+                //{
+                //    gameManager.chosen_Cards[i];
+                //}
+            }
         }
     }
 }

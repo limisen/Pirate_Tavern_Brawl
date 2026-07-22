@@ -15,7 +15,7 @@ public class PlayerReady : MonoBehaviour
         {
             Debug.Log("Player is ready to play their cards");
 
-            for (int i = 0; i <= gameManager.chosen_Cards.Count; i++)
+            for (int i = 0; i <= gameManager.chosen_Cards.Count - 1; i++)
             {
                 gameManager.chosen_Cards[i].transform.SetParent(playArea.transform);
                 gameManager.chosen_Cards[i].transform.localPosition = new Vector3(i, 0, 0);

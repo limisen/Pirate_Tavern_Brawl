@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1963932286532109460}
   - component: {fileID: 491724373381533251}
   - component: {fileID: 8325833735075018319}
+  - component: {fileID: 372753091008753840}
   m_Layer: 6
   m_Name: Middle_Card
   m_TagString: Untagged
@@ -153,6 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded69ec8de0c34545baee1dfc51497bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardInteract
+  CardSelected: 0
+  onCard: 0
   is_in_playbox: 0
 --- !u!50 &8325833735075018319
 Rigidbody2D:
@@ -181,6 +184,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &372753091008753840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821993898375347850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9eb810581289744c8e0569a999e2d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefenceCard
+  Name_Of_Card: 
+  Cost_of_Card: 0
+  Card_Portrait: {fileID: 0}
+  Card_Description: 
+  condition: 0
+  cardNoInteract: 0
+  Defence_Value: 0
 --- !u!1 &3354360964917797882
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +216,7 @@ GameObject:
   - component: {fileID: 3452813327624946869}
   - component: {fileID: 4817499501541510765}
   - component: {fileID: 3777005986593984546}
+  - component: {fileID: 5184746010793155186}
   m_Layer: 6
   m_Name: Left_Card
   m_TagString: Untagged
@@ -334,6 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded69ec8de0c34545baee1dfc51497bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardInteract
+  CardSelected: 0
+  onCard: 0
   is_in_playbox: 0
 --- !u!50 &3777005986593984546
 Rigidbody2D:
@@ -362,6 +387,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5184746010793155186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354360964917797882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15cfda15d7bc3145b82f0b1902b69f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackCard
+  Name_Of_Card: 
+  Cost_of_Card: 0
+  Card_Portrait: {fileID: 0}
+  Card_Description: 
+  condition: 0
+  cardNoInteract: 0
+  Damage: 0
 --- !u!1 &5041280922038279444
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +419,7 @@ GameObject:
   - component: {fileID: 2369012414987740267}
   - component: {fileID: 1713681117213813574}
   - component: {fileID: 7674890567224874059}
+  - component: {fileID: 24815957578086497}
   m_Layer: 6
   m_Name: Right_Card
   m_TagString: Untagged
@@ -515,6 +560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded69ec8de0c34545baee1dfc51497bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardInteract
+  CardSelected: 0
+  onCard: 0
   is_in_playbox: 0
 --- !u!50 &7674890567224874059
 Rigidbody2D:
@@ -543,6 +590,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &24815957578086497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041280922038279444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742d4ee87e59a7c4c919c367a47de48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialCard
+  Name_Of_Card: 
+  Cost_of_Card: 0
+  Card_Portrait: {fileID: 0}
+  Card_Description: 
+  condition: 0
+  cardNoInteract: 0
 --- !u!1 &8294736854852228707
 GameObject:
   m_ObjectHideFlags: 0
