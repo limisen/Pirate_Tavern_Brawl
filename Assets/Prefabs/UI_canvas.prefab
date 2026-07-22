@@ -499,7 +499,7 @@ MonoBehaviour:
   coins: {fileID: 324286886214653448}
   player_health_counter: {fileID: 1956025849229225603}
   purse: {fileID: 347622310733499331}
-  ConfirmButton: {fileID: 1306762190820014037}
+  confirmButton: {fileID: 1306762190820014037}
 --- !u!1 &7347828347935401042
 GameObject:
   m_ObjectHideFlags: 0
