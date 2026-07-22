@@ -3,18 +3,17 @@ using UnityEngine;
 public class PlayerReady : MonoBehaviour
 {
     GameManager gameManager;
+    [SerializeField] GameObject playArea;
     void Start()
     {
-        gameManager = GetComponent<GameManager>();
-
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
-    public void PlayerReady_Method(GameObject playArea)
+    public void PlayerReady_Method()
     {
         if (gameManager.player_Ready == true)
         {
             Debug.Log("Player is ready to play their cards");
-            // opponent väljer kort
 
             for (int i = 0; i < gameManager.chosen_Cards.Count; i++)
             {
