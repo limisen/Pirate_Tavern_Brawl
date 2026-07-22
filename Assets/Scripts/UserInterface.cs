@@ -24,8 +24,6 @@ public class UserInterface : MonoBehaviour
 
     public void buttonPress()
     {
-       
-            Debug.Log("Do stuffs");
-    
+        Debug.Log("Do stuffs");
     }
 }
