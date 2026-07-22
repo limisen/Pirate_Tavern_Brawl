@@ -5,6 +5,7 @@ public class GameLoop : MonoBehaviour
     GameManager gameManager;
     UserInterface userInterface;
     CameraSwitch cameraSwitch;
+    [SerializeField] GameObject playArea;
     private void Start()
     {
         gameManager = GetComponent<GameManager>();
@@ -18,14 +19,13 @@ public class GameLoop : MonoBehaviour
         {
             // switch camera
             cameraSwitch.SwitchToCamera("TableView");
+            //gameManager.player_Ready = false;
 
             // väljer kort etc att spela
 
-            // confirm
+            // confirm cards to be played
 
-            // opponent väljer kort
 
-            // switch camera
             //cameraSwitch.SwitchToCamera("TopDown");
 
             // calculate result of cards played + show player

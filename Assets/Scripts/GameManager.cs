@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public List<CardInteract> chosen_Cards = new();
 
+    public bool player_Ready;
+
     private void Start()
     {
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
@@ -105,8 +107,11 @@ public class GameManager : MonoBehaviour
         cameraSwitch.SwitchToCamera("TableView");
 
         gameLoop.GameLoop_Method();
+        if (player_Ready == true)
+        {
+            Debug.Log("Player is ready to play their cards");
+        }
+            //cameraSwitch.SwitchToCamera("BarView");
 
-        //cameraSwitch.SwitchToCamera("BarView");
-
-    }
+        }
 }
