@@ -25,7 +25,7 @@ public class CameraSwitch : MonoBehaviour
         else if (CameraToSwitchTo == "BarView")
         {
             camera_TopDown.enabled = false;
-            camera_BarView.enabled = false;
+            camera_TableView.enabled = false;
 
             camera_BarView.enabled = true;
         }

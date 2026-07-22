@@ -26,7 +26,7 @@ public class GameLoop : MonoBehaviour
             // opponent väljer kort
 
             // switch camera
-            cameraSwitch.SwitchToCamera("TopDown");
+            //cameraSwitch.SwitchToCamera("TopDown");
 
             // calculate result of cards played + show player
 

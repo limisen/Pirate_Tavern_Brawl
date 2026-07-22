@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour
                 specialCard.condition = Conditions.No_Attacks;
             }
         }
+        // cards are selected for play
         cameraSwitch.SwitchToCamera("TableView");
 
         gameLoop.GameLoop_Method();
