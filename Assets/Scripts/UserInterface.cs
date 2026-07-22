@@ -25,5 +25,6 @@ public class UserInterface : MonoBehaviour
     public void buttonPress()
     {
         Debug.Log("Do stuffs");
+        gameManager.player_Ready = true;
     }
 }
