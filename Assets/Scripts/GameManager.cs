@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 using static CardClass;
 
 public class GameManager : MonoBehaviour
@@ -107,7 +106,23 @@ public class GameManager : MonoBehaviour
         cameraSwitch.SwitchToCamera("TableView");
 
         gameLoop.GameLoop_Method();
-            //cameraSwitch.SwitchToCamera("BarView");
+    }
+    void Update()
+    {
+        // check hp if less than 0
+        if (player_HP >= 1 || opponent_HP >= 1)
+        {
+            // switch camera
+            cameraSwitch.SwitchToCamera("TableView");
+            //gameManager.player_Ready = false;
 
+            gameLoop.GameLoop_Method();
+
+            //userInterface.UpdatdeUIText();
         }
+        //if (player_HP >= 1 && opponent_HP <= 0)
+        //{
+        //    cameraSwitch.SwitchToCamera("BarView");
+        //}
+    }
 }

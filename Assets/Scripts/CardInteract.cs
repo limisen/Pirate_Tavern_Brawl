@@ -12,6 +12,7 @@ public class CardInteract : MonoBehaviour
     private Quaternion startLocalRotation;
     private int cardRendererStartingValue;
 
+    private CardClass cardClass;
     private Renderer cardRenderer;
     private Camera cam;
 
@@ -31,7 +32,8 @@ public class CardInteract : MonoBehaviour
     }
     void OnMouseDown()
     {
-        if (CardSelected == false)                        // If we click on a card set "CardSelected" to true and "onCard" to false.
+        cardClass = GetComponent<CardClass>();
+        if (CardSelected == false && cardClass.cardNoInteract == false)                        // If we click on a card set "CardSelected" to true and "onCard" to false.
         {
             CardSelected = true;                          // Attempting to make it so we dont try to both enlarge the card and move it at the same time
             onCard = false;
@@ -44,7 +46,8 @@ public class CardInteract : MonoBehaviour
     }
     void OnMouseOver()
     {
-        if (CardSelected == false && onCard == false)
+        cardClass = GetComponent<CardClass>();
+        if (CardSelected == false && onCard == false && cardClass.cardNoInteract == false)
         {
             onCard = true;
             cardManipulation();
@@ -57,30 +60,29 @@ public class CardInteract : MonoBehaviour
     }
     private void Update()
     {
-        if (CardSelected == true && onCard == false)
+        if (CardSelected == true && onCard == false && cardClass.cardNoInteract == false)
         {
             cardManipulation();                        // if we are holding down M1 then move the card along with the mouse
         }
     }
     void cardManipulation()
     {
-        if (CardSelected == true)     // If we are holding down M1, rotate the card upright then move it along with the mouse
+        if (CardSelected == true && cardClass.cardNoInteract == false)     // If we are holding down M1, rotate the card upright then move it along with the mouse
         {
             gameObject.transform.localScale = new Vector3(0.3f, 0.3f, 1);
             gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             gameObject.transform.localPosition = cam.ScreenToWorldPoint(new Vector3((Mouse.current.position.ReadValue().x - 35), (Mouse.current.position.ReadValue().y + 350), 11)); // breaks on other resolutions than 1920x1080
             cardRenderer.sortingOrder = 100;
         }
-        else if (onCard == true)    // If we are hovering over a card, Enlarge it and rotate it upright
+        else if (onCard == true && cardClass.cardNoInteract == false)    // If we are hovering over a card, Enlarge it and rotate it upright
         {
             gameObject.transform.localScale = new Vector3(1f, 1f, 1);
             gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             gameObject.transform.localPosition = new Vector3(0, 2.5f, 0);
             cardRenderer.sortingOrder = 100;
         }
-        else if (CardSelected == false && is_in_playbox && onCard == false && gameObject.transform.localScale == new Vector3(0.3f, 0.3f, 1))
+        else if (CardSelected == false && onCard == false && is_in_playbox == true && gameObject.transform.localScale == new Vector3(0.3f, 0.3f, 1) && cardClass.cardNoInteract == false)
         {
-            is_in_playbox = true;
             Debug.Log("kortet " + gameObject.name + " har valts för att spelas");
             gameManager.chosen_Cards.Add(this);
             Debug.Log("Kortet läggs till i array'n: " + gameManager.chosen_Cards);

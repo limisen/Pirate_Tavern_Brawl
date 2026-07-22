@@ -24,7 +24,7 @@ public class UserInterface : MonoBehaviour
 
     public void buttonPress()
     {
-        Debug.Log("Do stuffs");
+        Debug.Log("confirm button pressed");
         gameManager.player_Ready = true;
     }
 }

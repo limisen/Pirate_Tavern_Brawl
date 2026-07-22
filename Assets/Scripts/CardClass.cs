@@ -11,4 +11,5 @@ public class CardClass : MonoBehaviour
     public Sprite Card_Portrait;
     public string Card_Description;
     public Conditions condition;
+    public bool cardNoInteract;
 }
