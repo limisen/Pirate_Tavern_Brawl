@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
-        gameLoop = GetComponent<GameLoop>();
+        gameLoop = FindAnyObjectByType<GameLoop>();
 
         // start of Encounter
         coins_Available = 50;
@@ -107,10 +107,6 @@ public class GameManager : MonoBehaviour
         cameraSwitch.SwitchToCamera("TableView");
 
         gameLoop.GameLoop_Method();
-        if (player_Ready == true)
-        {
-            Debug.Log("Player is ready to play their cards");
-        }
             //cameraSwitch.SwitchToCamera("BarView");
 
         }

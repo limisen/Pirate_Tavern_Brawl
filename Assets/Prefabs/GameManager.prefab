@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6066914187363243636}
   - component: {fileID: 3428718693814189465}
   - component: {fileID: 463916973779400546}
+  - component: {fileID: 7304402708071266557}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,11 +50,12 @@ MonoBehaviour:
   AttackCardPrefab: {fileID: 4202990657420990820, guid: c9fe35c4c98f7b444b6965ce8d08c806, type: 3}
   DefenceCardPrefab: {fileID: 4202990657420990820, guid: 8925c10d85d3450479193f6278f041ba, type: 3}
   SpecialCardPrefab: {fileID: 4202990657420990820, guid: 1c573a1b28ae0aa48a780971438837dc, type: 3}
-  gameLoop: {fileID: 0}
   coins_Available: 0
   costs_Of_Card: 0
   player_HP: 0
   opponent_HP: 0
+  chosen_Cards: []
+  player_Ready: 0
 --- !u!114 &463916973779400546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,3 +68,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf2e2a3fa1a44647b49cc641c9bb5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameLoop
+--- !u!114 &7304402708071266557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2352680126373546414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586e71020d6aa594b858bb9d0a79c655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerReady
+  playArea: {fileID: 0}

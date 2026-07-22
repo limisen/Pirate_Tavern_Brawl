@@ -5,12 +5,13 @@ public class GameLoop : MonoBehaviour
     GameManager gameManager;
     UserInterface userInterface;
     CameraSwitch cameraSwitch;
-    [SerializeField] GameObject playArea;
+    PlayerReady playerReadyScript;
     private void Start()
     {
         gameManager = GetComponent<GameManager>();
         userInterface = FindAnyObjectByType<UserInterface>();
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
+        playerReadyScript = FindAnyObjectByType<PlayerReady>();
     }
 
     public void GameLoop_Method()
@@ -24,7 +25,7 @@ public class GameLoop : MonoBehaviour
             // väljer kort etc att spela
 
             // confirm cards to be played
-
+            playerReadyScript.PlayerReady_Method();
 
             //cameraSwitch.SwitchToCamera("TopDown");
 
