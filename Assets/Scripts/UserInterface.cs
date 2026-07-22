@@ -8,6 +8,8 @@ public class UserInterface : MonoBehaviour
     [SerializeField] Text coins;
     [SerializeField] Text player_health_counter;
     [SerializeField] Animator purse;
+    [SerializeField] Button confirmButton;
+
 
     public void Start()
     {
@@ -18,5 +20,12 @@ public class UserInterface : MonoBehaviour
     {
         coins.text = gameManager.coins_Available.ToString();
         player_health_counter.text = gameManager.player_HP.ToString();
+    }
+
+    public void buttonPress()
+    {
+       
+            Debug.Log("Do stuffs");
+    
     }
 }
