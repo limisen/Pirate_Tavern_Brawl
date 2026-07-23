@@ -31,6 +31,7 @@ public class GameLoop : MonoBehaviour
             {
                 Debug.Log("Changing Camera To TopDown");
                 cameraSwitch.SwitchToCamera("TopDown");
+                cameraSwitch.currentCamera = "TopCamera";
             }
 
             Debug.Log("Starting Total Damage: " + totatlDMG);

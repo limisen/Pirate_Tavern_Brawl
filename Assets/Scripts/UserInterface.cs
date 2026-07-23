@@ -29,5 +29,6 @@ public class UserInterface : MonoBehaviour
     {
         Debug.Log("confirm button pressed");
         gameManager.player_Ready = true;
+        FindAnyObjectByType<CameraSwitch>().SwitchToCamera("TopDown");
     }
 }

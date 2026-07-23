@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using static CardClass;
 
@@ -130,9 +131,11 @@ public class GameManager : MonoBehaviour
         //{
         //    cameraSwitch.SwitchToCamera("BarView");
         //}
+    }
 
-
-        // Debug for set current camera
+    private void LateUpdate()
+    {
+        //Debug for set current camera
         if (tableView == true)
         {
             cameraSwitch.currentCamera = "TableCamera";
