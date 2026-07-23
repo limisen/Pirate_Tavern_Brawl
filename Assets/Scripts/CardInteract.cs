@@ -78,7 +78,7 @@ public class CardInteract : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(1f, 1f, 1);
             gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            gameObject.transform.localPosition = new Vector3(0, 2.5f, 0);
+            //gameObject.transform.localPosition = new Vector3(0, 2.5f, 0);
             cardRenderer.sortingOrder = 100;
         }
         else if (CardSelected == false && onCard == false && is_in_playbox == true && gameObject.transform.localScale == new Vector3(0.3f, 0.3f, 1) && cardClass.cardNoInteract == false)
@@ -86,8 +86,9 @@ public class CardInteract : MonoBehaviour
             Debug.Log("kortet " + gameObject.name + " har valts för att spelas");
             gameManager.chosen_Cards.Add(this);
             Debug.Log("Kortet läggs till i array'n: " + gameManager.chosen_Cards);
+            gameObject.GetComponent<CardClass>().cardNoInteract = true;
         }
-        else if (CardSelected == false || onCard == false || is_in_playbox == false) // if we arent hovering over a card or holding down M1 on it, return it to the scale, rotation and position it was at the start.
+        else if ((CardSelected == false || onCard == false || is_in_playbox == false) && cardClass.cardNoInteract == false) // if we arent hovering over a card or holding down M1 on it, return it to the scale, rotation and position it was at the start.
         {
             gameObject.transform.localScale = startLocalScale;
             gameObject.transform.localRotation = startLocalRotation;

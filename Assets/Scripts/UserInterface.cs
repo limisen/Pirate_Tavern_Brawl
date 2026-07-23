@@ -11,7 +11,7 @@ public class UserInterface : MonoBehaviour
     [SerializeField] Button confirmButton;
     [SerializeField] GameObject BuyButtons;
 
-    // drinkarna
+    // Power-Ups at the Bar
     [SerializeField] GameObject health_drink;
     [SerializeField] GameObject greed_drink;
     [SerializeField] GameObject fury_drink;
@@ -25,8 +25,6 @@ public class UserInterface : MonoBehaviour
 
     public void UpdatdeUIText()
     {
-        Debug.Log(coins);
-        Debug.Log(gameManager);
         coins.text = gameManager.coins_Available.ToString();
         player_health_counter.text = gameManager.player_HP.ToString();
     }

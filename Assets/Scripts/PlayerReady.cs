@@ -6,9 +6,9 @@ public class PlayerReady : MonoBehaviour
     GameManager gameManager;
     [SerializeField] GameObject playArea;
 
-    [SerializeField] Vector3 startPos = new Vector3(-0.36f, 0, 0);
-    [SerializeField] Vector3 cardSpacing = new Vector3(0.23f, 0, 0);
-    [SerializeField] Vector3 cardScale = new Vector3(0.05f, 0.13333334f, 0.6666666f);
+    [SerializeField] Vector3 startPos = new Vector3(-0.437000006f, 0.282000005f, 0);
+    [SerializeField] Vector3 cardSpacing = new Vector3(0.14f, 0, 0);
+    [SerializeField] Vector3 cardScale = new Vector3(0.03f, 0.08f, 0.4f);
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
