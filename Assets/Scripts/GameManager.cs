@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using static CardClass;
 
@@ -7,6 +8,12 @@ public class GameManager : MonoBehaviour
     GameLoop gameLoop;
     GameLoop Encounter_Loop;
     CameraSwitch cameraSwitch;
+
+    //Debug for set current camera
+    public bool tableView = false;
+    public bool topView = false;
+    public bool barView = false;
+
 
     [SerializeField] public GameObject ParentObject;
 
@@ -113,7 +120,7 @@ public class GameManager : MonoBehaviour
         if (player_HP >= 1 || opponent_HP >= 1)
         {
             // switch camera
-            cameraSwitch.SwitchToCamera("TableView");
+            //cameraSwitch.SwitchToCamera("TableView");
 
             gameLoop.GameLoop_Method();
             //gameManager.player_Ready = false;
@@ -124,5 +131,25 @@ public class GameManager : MonoBehaviour
         //{
         //    cameraSwitch.SwitchToCamera("BarView");
         //}
+    }
+
+    private void LateUpdate()
+    {
+        //Debug for set current camera
+        if (tableView == true)
+        {
+            cameraSwitch.currentCamera = "TableCamera";
+            cameraSwitch.SwitchToCamera("TableView");
+        }
+        if (topView == true)
+        {
+            cameraSwitch.currentCamera = "TopCamera";
+            cameraSwitch.SwitchToCamera("TopDown");
+        }
+        if (barView == true)
+        {
+            cameraSwitch.currentCamera = "BarCamera";
+            cameraSwitch.SwitchToCamera("BarView");
+        }
     }
 }
