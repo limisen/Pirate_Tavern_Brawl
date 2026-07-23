@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
         if (player_HP >= 1 || opponent_HP >= 1)
         {
             // switch camera
-            cameraSwitch.SwitchToCamera("TableView");
+            //cameraSwitch.SwitchToCamera("TableView");
 
             gameLoop.GameLoop_Method();
             //gameManager.player_Ready = false;
