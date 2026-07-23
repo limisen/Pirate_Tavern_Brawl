@@ -131,6 +131,8 @@ public class GameManager : MonoBehaviour
         //    cameraSwitch.SwitchToCamera("BarView");
         //}
 
+
+        // Debug for set current camera
         if (tableView == true)
         {
             cameraSwitch.currentCamera = "TableCamera";
