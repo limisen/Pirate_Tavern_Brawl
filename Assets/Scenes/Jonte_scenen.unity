@@ -944,17 +944,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &212447685 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4347700075310507580, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-  m_PrefabInstance: {fileID: 6067966595631162950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &238640403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,17 +3594,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &1316214976 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1306762190820014037, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-  m_PrefabInstance: {fileID: 6067966595631162950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1505210113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,17 +3870,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &1681567857 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7987680917263592532, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-  m_PrefabInstance: {fileID: 6067966595631162950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1698932849 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1173622483717798642, guid: c2cc40a9bd7c03242ba7d2ee68723c85, type: 3}
@@ -4012,17 +3979,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2015348101 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 777057408171456720, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-  m_PrefabInstance: {fileID: 6067966595631162950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &2023444151
 GameObject:
   m_ObjectHideFlags: 0
@@ -4287,7 +4243,7 @@ PrefabInstance:
     - target: {fileID: 2780666725482416, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: confirmButton
       value: 
-      objectReference: {fileID: 1316214976}
+      objectReference: {fileID: 0}
     - target: {fileID: 412443603427051327, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Type
       value: 0
@@ -4303,7 +4259,7 @@ PrefabInstance:
     - target: {fileID: 777057408171456720, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2015348101}
+      objectReference: {fileID: 0}
     - target: {fileID: 777057408171456720, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.UI.Button, UnityEngine.UI
@@ -4411,7 +4367,7 @@ PrefabInstance:
     - target: {fileID: 4347700075310507580, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 212447685}
+      objectReference: {fileID: 0}
     - target: {fileID: 4347700075310507580, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.UI.Button, UnityEngine.UI
@@ -4520,6 +4476,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7812113874020850686, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 364917669}
+    - target: {fileID: 7812113874020850686, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buttonPress
+      objectReference: {fileID: 0}
     - target: {fileID: 7987680917263592532, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
@@ -4527,7 +4491,7 @@ PrefabInstance:
     - target: {fileID: 7987680917263592532, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1681567857}
+      objectReference: {fileID: 0}
     - target: {fileID: 7987680917263592532, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.UI.Button, UnityEngine.UI
