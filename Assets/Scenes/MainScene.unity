@@ -1140,7 +1140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: barView
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: ParentObject
@@ -1190,6 +1190,18 @@ PrefabInstance:
       propertyPath: playArea
       value: 
       objectReference: {fileID: 1245983770}
+    - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: cardScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: cardScale.y
+      value: 0.1333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: cardScale.z
+      value: 0.6666666
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
