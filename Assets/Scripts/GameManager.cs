@@ -8,12 +8,12 @@ public class GameManager : MonoBehaviour
     GameLoop gameLoop;
     GameLoop Encounter_Loop;
     CameraSwitch cameraSwitch;
+    UserInterface userInterface;
 
     //Debug for set current camera
     public bool tableView = false;
     public bool topView = false;
     public bool barView = false;
-
 
     [SerializeField] public GameObject ParentObject;
 
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        userInterface = FindAnyObjectByType<UserInterface>();
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
         gameLoop = FindAnyObjectByType<GameLoop>();
 
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
 
                 //attackCard.Card_Portrait = Sprite new sprite;
 
-                attackCard.Card_Description = "blabla bla";
+                attackCard.Card_Description = "Attack Card Description";
 
                 attackCard.Damage = Random.Range(1, 4);
 
@@ -87,7 +88,7 @@ public class GameManager : MonoBehaviour
 
                 defenceCard.Cost_of_Card = costs_Of_Card;
 
-                defenceCard.Card_Description = "Bla Bla Bla";
+                defenceCard.Card_Description = "Defence Card Description";
 
                 defenceCard.Defence_Value = Random.Range(1, 4);
 
@@ -104,12 +105,13 @@ public class GameManager : MonoBehaviour
 
                 specialCard.Cost_of_Card = costs_Of_Card;
 
-                specialCard.Card_Description = "Bla Bla Bla";
+                specialCard.Card_Description = "Special Card Description";
 
                 specialCard.condition = Conditions.No_Attacks;
             }
         }
-        // cards are selected for play
+        userInterface.UpdatdeUIText();
+
         cameraSwitch.SwitchToCamera("TableView");
 
         gameLoop.GameLoop_Method();
@@ -125,12 +127,14 @@ public class GameManager : MonoBehaviour
             gameLoop.GameLoop_Method();
             //gameManager.player_Ready = false;
 
-            //userInterface.UpdatdeUIText();
+            userInterface.UpdatdeUIText();
         }
-        //if (player_HP >= 1 && opponent_HP <= 0)
-        //{
-        //    cameraSwitch.SwitchToCamera("BarView");
-        //}
+        if (player_HP >= 1 && opponent_HP <= 0)
+        {
+            coins_Available += 20; // reward for winning the encounter
+            userInterface.UpdatdeUIText();
+            cameraSwitch.SwitchToCamera("BarView");
+        }
     }
 
     private void LateUpdate()

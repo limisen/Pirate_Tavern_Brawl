@@ -20,7 +20,6 @@ public class PlayerReady : MonoBehaviour
         {
             Debug.Log("Player is ready to play their cards");
 
-            int row = 0;
             int col = 0;
             // Move the chosen cards to the play area and set their position
             for (int i = 0; i <= gameManager.chosen_Cards.Count - 1; i++)

@@ -28,14 +28,15 @@ RectTransform:
   m_GameObject: {fileID: 1979232714534485437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_LocalScale: {x: 2.08, y: 2.08, z: 2.08}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 8065367282996198476}
   m_Father: {fileID: 7529900746828227978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.068, y: 0.104}
   m_AnchorMax: {x: 0.068, y: 0.104}
-  m_AnchoredPosition: {x: 1.6000366, y: 14.700012}
+  m_AnchoredPosition: {x: 1546, y: 104.7}
   m_SizeDelta: {x: 128, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5338707147000228919
@@ -107,7 +108,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4511064184335153675}
-  - component: {fileID: 5668611846013173080}
   m_Layer: 0
   m_Name: BuyButtons
   m_TagString: Untagged
@@ -133,26 +133,6 @@ Transform:
   - {fileID: 6470566624249012613}
   m_Father: {fileID: 7529900746828227978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5668611846013173080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3543386610684287181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea71fc8786ae7047918f86301476a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UserInterface
-  coins: {fileID: 0}
-  player_health_counter: {fileID: 0}
-  purse: {fileID: 0}
-  confirmButton: {fileID: 0}
-  BuyButtons: {fileID: 3543386610684287181}
-  health_drink: {fileID: 0}
-  greed_drink: {fileID: 0}
-  fury_drink: {fileID: 0}
 --- !u!1 &4293594532082430835
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,11 +163,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7529900746828227978}
+  m_Father: {fileID: 7730508513300600591}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -307.29993, y: -232.70001}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6539581586681642062
@@ -344,7 +324,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7730508513300600591}
-  - {fileID: 8065367282996198476}
   - {fileID: 1255936747257314978}
   - {fileID: 5100232962126333075}
   - {fileID: 6689088708802084082}
@@ -433,13 +412,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UserInterface
   coins: {fileID: 951348802899016324}
-  player_health_counter: {fileID: 4727602942528594923}
   purse: {fileID: 4234929097734674152}
+  player_health_counter: {fileID: 4727602942528594923}
   confirmButton: {fileID: 7812113874020850686}
   BuyButtons: {fileID: 3543386610684287181}
-  health_drink: {fileID: 0}
-  greed_drink: {fileID: 0}
-  fury_drink: {fileID: 0}
+  health_drink: {fileID: 5906571551217498974}
+  greed_drink: {fileID: 7706026417154681800}
+  fury_drink: {fileID: 8431216662320040045}
 --- !u!1 &5642478929722241914
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 761, y: -91}
+  m_AnchoredPosition: {x: 750, y: 200}
   m_SizeDelta: {x: 92, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &821963014540933206

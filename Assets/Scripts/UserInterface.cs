@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour
 {
-    GameManager gameManager;
+    [SerializeField] GameManager gameManager;
 
     [SerializeField] Text coins;
-    [SerializeField] Text player_health_counter;
     [SerializeField] Animator purse;
+    [SerializeField] Text player_health_counter;
     [SerializeField] Button confirmButton;
     [SerializeField] GameObject BuyButtons;
 
@@ -20,12 +20,13 @@ public class UserInterface : MonoBehaviour
 
     public void Start()
     {
-        gameManager = FindAnyObjectByType<GameManager>();
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
     }
 
     public void UpdatdeUIText()
     {
+        Debug.Log(coins);
+        Debug.Log(gameManager);
         coins.text = gameManager.coins_Available.ToString();
         player_health_counter.text = gameManager.player_HP.ToString();
     }
