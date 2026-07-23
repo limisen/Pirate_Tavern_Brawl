@@ -6,9 +6,9 @@ public class PlayerReady : MonoBehaviour
     GameManager gameManager;
     [SerializeField] GameObject playArea;
 
-    [SerializeField] Vector3 startPos = new Vector3(-0.437000006f, 0.282000005f, 0);
-    [SerializeField] Vector3 cardSpacing = new Vector3(0.14f, 0, 0);
-    [SerializeField] Vector3 cardScale = new Vector3(0.03f, 0.08f, 0.4f);
+    [SerializeField] Vector3 startPos = new Vector3(-0.4f, 0.25f, 0);
+    [SerializeField] Vector3 cardSpacing = new Vector3(0.2f, 0, 0);
+    [SerializeField] Vector3 cardScale = new Vector3(0.03f, 0.045f, 1);
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
@@ -24,15 +24,17 @@ public class PlayerReady : MonoBehaviour
             // Move the chosen cards to the play area and set their position
             for (int i = 0; i <= gameManager.chosen_Cards.Count - 1; i++)
             {
-                if (col == 6)
+                if (col == 5)
                 {
                     col = 0;
-                    startPos.y -= 0.3f;
+                    startPos.y -= 0.5f;
                 }
                 gameManager.chosen_Cards[i].transform.SetParent(playArea.transform);
-                gameManager.chosen_Cards[i].GetComponent<CardClass>().cardNoInteract = true;
 
                 gameManager.chosen_Cards[i].transform.localScale = cardScale;
+
+                gameManager.chosen_Cards[i].GetComponent<CardClass>().cardNoInteract = true;
+
                 gameManager.chosen_Cards[i].transform.localPosition = startPos + (cardSpacing * col);
                 col++;
             }
