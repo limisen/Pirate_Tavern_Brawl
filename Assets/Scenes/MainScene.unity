@@ -503,6 +503,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: tableView
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: ParentObject
       value: 
       objectReference: {fileID: 861345656}
@@ -556,7 +560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: startPos.y
-      value: -0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: cardScale.x
@@ -564,7 +568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: cardScale.y
-      value: 0.03
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: cardScale.z
@@ -1929,6 +1933,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -214
       objectReference: {fileID: 0}
+    - target: {fileID: 1513939912944738719, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3458760294534237262, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Color.b
       value: 0.2691349
@@ -1957,6 +1965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5992413174496127149, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6922588364294642119, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 2
@@ -1968,6 +1980,10 @@ PrefabInstance:
     - target: {fileID: 6922588364294642119, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_FontData.m_FontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928844766627780808, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529900746828227978, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Pivot.x
@@ -2645,7 +2661,7 @@ PrefabInstance:
       objectReference: {fileID: 1309694046}
     - target: {fileID: 6551061931872813176, guid: bb6f0e8f2a19ee84aa4b2d1fef182b12, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9125571858521112065, guid: bb6f0e8f2a19ee84aa4b2d1fef182b12, type: 3}
       propertyPath: m_Enabled
