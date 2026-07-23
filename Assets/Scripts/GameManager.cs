@@ -114,9 +114,9 @@ public class GameManager : MonoBehaviour
         {
             // switch camera
             cameraSwitch.SwitchToCamera("TableView");
-            //gameManager.player_Ready = false;
 
             gameLoop.GameLoop_Method();
+            //gameManager.player_Ready = false;
 
             //userInterface.UpdatdeUIText();
         }
