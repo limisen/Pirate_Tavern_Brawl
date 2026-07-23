@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public List<CardInteract> chosen_Cards = new();
 
     public bool player_Ready;
+    public bool player_ReadyToReturn;
 
     private void Start()
     {
@@ -129,12 +130,7 @@ public class GameManager : MonoBehaviour
 
             userInterface.UpdatdeUIText();
         }
-        if (player_HP >= 1 && opponent_HP <= 0)
-        {
-            coins_Available += 20; // reward for winning the encounter
-            userInterface.UpdatdeUIText();
-            cameraSwitch.SwitchToCamera("BarView");
-        }
+        
     }
 
     private void LateUpdate()

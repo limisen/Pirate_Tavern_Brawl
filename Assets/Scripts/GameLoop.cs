@@ -32,57 +32,77 @@ public class GameLoop : MonoBehaviour
                 Debug.Log("Changing Camera To TopDown");
                 cameraSwitch.SwitchToCamera("TopDown");
                 cameraSwitch.currentCamera = "TopCamera";
-            }
+                Debug.Log("Starting Total Damage: " + totatlDMG);
+                Debug.Log("Starting Total Defence: " + totatlDefence);
 
-            Debug.Log("Starting Total Damage: " + totatlDMG);
-            Debug.Log("Starting Total Defence: " + totatlDefence);
-
-            // calculate result of cards played
-            for (int i = 0; i < gameManager.chosen_Cards.Count; i++)
-            {
-                if (gameManager.chosen_Cards[i].GetComponent<AttackCard>())
+                // calculate result of cards played
+                for (int i = 0; i < gameManager.chosen_Cards.Count; i++)
                 {
-                    totatlDMG += gameManager.chosen_Cards[i].GetComponent<AttackCard>().Damage;
+                    if (gameManager.chosen_Cards[i].GetComponent<AttackCard>())
+                    {
+                        totatlDMG += gameManager.chosen_Cards[i].GetComponent<AttackCard>().Damage;
+                    }
+                    else if (gameManager.chosen_Cards[i].GetComponent<DefenceCard>())
+                    {
+                        totatlDefence += gameManager.chosen_Cards[i].GetComponent<DefenceCard>().Defence_Value;
+                    }
+                    else if (gameManager.chosen_Cards[i].GetComponent<SpecialCard>())
+                    {
+                        gameManager.chosen_Cards[i].GetComponent<SpecialCard>();
+                    }
                 }
-                else if (gameManager.chosen_Cards[i].GetComponent<DefenceCard>())
-                {
-                    totatlDefence += gameManager.chosen_Cards[i].GetComponent<DefenceCard>().Defence_Value;
-                }
-                else if (gameManager.chosen_Cards[i].GetComponent<SpecialCard>())
-                {
-                    gameManager.chosen_Cards[i].GetComponent<SpecialCard>();
-                }
-            }
-            // apply the result of cards played + Log the result to the console
-            if (gameManager.player_Ready == true)
-            {
+                // Log the result to the console
                 Debug.Log("Total Damage: " + totatlDMG);
                 Debug.Log("Total Defence: " + totatlDefence);
-
                 totatlDMG -= totatlDefence;
                 Debug.Log("Total Damage after Defence: " + totatlDMG);
+                
+                gameManager.player_Ready = false;
+            }
 
-                if (totatlDMG > 0) // + && gameManager.opponentChosenCards total defence value < totatlDMG
+
+            // When the player is ready to return to the table view, apply the damage to the opponent's HP (otherwise the player would be thrust into the bar view, if it was done sooner)
+            if (gameManager.player_ReadyToReturn == true)
+            {
+                if (totatlDefence == totatlDMG)
+                {
+                    Debug.Log("Damage Perfectly Blocked by opponent!");
+                }
+                else if (totatlDMG > totatlDefence)
                 {
                     gameManager.opponent_HP -= totatlDMG;
+                    userInterface.UpdatdeUIText();
                     Debug.Log("Opponent HP after Damage: " + gameManager.opponent_HP);
                 }
                 else
                 {
                     Debug.Log("No Damage Dealt to Opponent");
                 }
-            }
 
-            // return the values to zero and switch camera back to table view
-            totatlDMG = 0;
-            totatlDefence = 0;
+                // return the values to zero
+                totatlDMG = 0;
+                totatlDefence = 0;
 
-            if (gameManager.player_Ready == true)
-            {
+                if (gameManager.player_HP >= 1 && gameManager.opponent_HP <= 0)
+                {
+                    Debug.Log("Player has won the encounter!");
+                    gameManager.coins_Available += 20; // reward for winning the encounter
+                    userInterface.UpdatdeUIText();
+                    Debug.Log("Player gained 20 coins!");
+                    Debug.Log("Player Coins: " + gameManager.coins_Available);
+                }
+
+                // Destroy the chosen cards since they have been played
+                for (int i = 0; i < gameManager.chosen_Cards.Count; i++)
+                {
+                    Destroy(gameManager.chosen_Cards[i].gameObject);
+                }
+                // Clear the list of chosen cards since they have all been played
                 gameManager.chosen_Cards.Clear();
-                //cameraSwitch.SwitchToCamera("TableView");
-                //Debug.Log("Changing Camera To TableView");
+
+                // reset the player ready variables so that the player can choose cards again
                 gameManager.player_Ready = false;
+                gameManager.player_ReadyToReturn = false;
             }
         }
     }

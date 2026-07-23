@@ -59,6 +59,10 @@ MonoBehaviour:
   camera_TableView: {fileID: 9115876838469084311}
   camera_TopDown: {fileID: 6958215846208137344}
   camera_BarView: {fileID: 9125571858521112065}
+  TableView: {fileID: 0}
+  TopDownView: {fileID: 0}
+  BarView: {fileID: 0}
+  currentCamera: 
 --- !u!1001 &1209600558745063080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5342202998284095184, guid: fc1e592dcdcef4c43a57d7d03caa4aae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.5
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5342202998284095184, guid: fc1e592dcdcef4c43a57d7d03caa4aae, type: 3}
       propertyPath: m_LocalRotation.w

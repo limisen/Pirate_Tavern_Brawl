@@ -38,14 +38,14 @@ public class UserInterface : MonoBehaviour
 
     public void buyButtonOne(Button buttonOne)
     {
-        Debug.Log("Knapp 1");
+        Debug.Log("Buy Health Drink");
         health_drink.gameObject.SetActive(false);
         buttonOne.gameObject.SetActive(false);
     }
 
     public void buyButtonTwo(Button buttonTwo)
     {
-        Debug.Log("Knapp 2");
+        Debug.Log("Buy Greed Drink");
         greed_drink.gameObject.SetActive(false);
         buttonTwo.gameObject.SetActive(false);
 
@@ -53,9 +53,24 @@ public class UserInterface : MonoBehaviour
 
     public void buyButtonThree(Button buttonThree)
     {
-        Debug.Log("Knapp 3");
+        Debug.Log("Buy Fury Drink");
         fury_drink.gameObject.SetActive(false);
         buttonThree.gameObject.SetActive(false);
 
+    }
+    public void doneWithCheckingResults()
+    {
+        if (gameManager.opponent_HP > 0)
+        {
+            Debug.Log("Changing Camera To TableView");
+            cameraSwitch.SwitchToCamera("TableView");
+            gameManager.player_ReadyToReturn = true;
+        } 
+        else if (gameManager.opponent_HP <= 0)
+        {
+            Debug.Log("Changing Camera To BarView");
+            cameraSwitch.SwitchToCamera("BarView");
+            gameManager.player_ReadyToReturn = true;
+        }
     }
 }
