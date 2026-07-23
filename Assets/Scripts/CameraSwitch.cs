@@ -7,16 +7,11 @@ public class CameraSwitch : MonoBehaviour
     [SerializeField] Camera camera_TopDown;
     [SerializeField] Camera camera_BarView;
     [SerializeField] GameObject BarButtons;
-    UserInterface userInterface;
 
-    public string currentCamera = "TableCamera";
-    public void Start()
-    {
-        userInterface = GetComponent<UserInterface>();
-    }
+    public string currentCamera;
     public void SwitchToCamera(string CameraToSwitchTo = "TableView")
     {
-        if (CameraToSwitchTo == "TableView")
+        if (CameraToSwitchTo == "TableView" || currentCamera == "TableCamera")
         {
             camera_TopDown.enabled = false;
             camera_BarView.enabled = false;
@@ -24,22 +19,22 @@ public class CameraSwitch : MonoBehaviour
             camera_TableView.enabled = true;
             currentCamera = "TableCamera";
         }
-        else if (CameraToSwitchTo == "TopDown")
+        else if (CameraToSwitchTo == "TopDown" || currentCamera == "TopCamera")
         {
             camera_TableView.enabled = false;
             camera_BarView.enabled = false;
 
             camera_TopDown.enabled = true;
             currentCamera = "TopCamera";
-            BarButtons.gameObject.SetActive(false);
         }
-        else if (CameraToSwitchTo == "BarView")
+        else if (CameraToSwitchTo == "BarView" || currentCamera == "BarCamera")
         {
             camera_TopDown.enabled = false;
             camera_TableView.enabled = false;
 
             camera_BarView.enabled = true;
             currentCamera = "BarCamera";
+            BarButtons.gameObject.SetActive(false);
         }
     }
 }

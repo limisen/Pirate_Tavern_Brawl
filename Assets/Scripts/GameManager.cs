@@ -8,6 +8,12 @@ public class GameManager : MonoBehaviour
     GameLoop Encounter_Loop;
     CameraSwitch cameraSwitch;
 
+    //Debug for set current camera
+    public bool tableView = false;
+    public bool topView = false;
+    public bool barView = false;
+
+
     [SerializeField] public GameObject ParentObject;
 
     [SerializeField] GameObject AttackCardPrefab;
@@ -124,5 +130,21 @@ public class GameManager : MonoBehaviour
         //{
         //    cameraSwitch.SwitchToCamera("BarView");
         //}
+
+        if (tableView == true)
+        {
+            cameraSwitch.currentCamera = "TableCamera";
+            cameraSwitch.SwitchToCamera("TableView");
+        }
+        if (topView == true)
+        {
+            cameraSwitch.currentCamera = "TopCamera";
+            cameraSwitch.SwitchToCamera("TopDown");
+        }
+        if (barView == true)
+        {
+            cameraSwitch.currentCamera = "BarCamera";
+            cameraSwitch.SwitchToCamera("BarView");
+        }
     }
 }

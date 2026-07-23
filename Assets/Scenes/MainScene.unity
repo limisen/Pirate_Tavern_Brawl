@@ -1139,6 +1139,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: barView
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: ParentObject
       value: 
       objectReference: {fileID: 861345656}
