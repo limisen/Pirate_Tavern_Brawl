@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4013282974203750834}
   - component: {fileID: 5784664499876941798}
+  - component: {fileID: 5029714262351580246}
   m_Layer: 0
   m_Name: GreedDrinkSprite_0
   m_TagString: Untagged
@@ -92,6 +93,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &5029714262351580246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173622483717798642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea71fc8786ae7047918f86301476a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UserInterface
+  coins: {fileID: 0}
+  player_health_counter: {fileID: 0}
+  purse: {fileID: 0}
+  confirmButton: {fileID: 0}
+  BuyButtons: {fileID: 0}
+  health_drink: {fileID: 0}
+  greed_drink: {fileID: 1173622483717798642}
+  fury_drink: {fileID: 0}
 --- !u!1 &2581338154443146246
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338484179936491980}
   - component: {fileID: 4834550683869340906}
+  - component: {fileID: 3784631307682121148}
   m_Layer: 0
   m_Name: FurryDrink_0
   m_TagString: Untagged
@@ -309,6 +331,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &3784631307682121148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4161391450983532906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea71fc8786ae7047918f86301476a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UserInterface
+  coins: {fileID: 0}
+  player_health_counter: {fileID: 0}
+  purse: {fileID: 0}
+  confirmButton: {fileID: 0}
+  BuyButtons: {fileID: 0}
+  health_drink: {fileID: 0}
+  greed_drink: {fileID: 0}
+  fury_drink: {fileID: 4161391450983532906}
 --- !u!1 &7022722671714282331
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6851714616831172447}
   - component: {fileID: 3587189624535106610}
+  - component: {fileID: 8634488967120930291}
   m_Layer: 0
   m_Name: Healthdrink_0
   m_TagString: Untagged
@@ -435,3 +478,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &8634488967120930291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373142616089723861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea71fc8786ae7047918f86301476a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UserInterface
+  coins: {fileID: 0}
+  player_health_counter: {fileID: 0}
+  purse: {fileID: 0}
+  confirmButton: {fileID: 0}
+  BuyButtons: {fileID: 0}
+  health_drink: {fileID: 8373142616089723861}
+  greed_drink: {fileID: 0}
+  fury_drink: {fileID: 0}
