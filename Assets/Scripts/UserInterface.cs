@@ -9,11 +9,14 @@ public class UserInterface : MonoBehaviour
     [SerializeField] Text player_health_counter;
     [SerializeField] Animator purse;
     [SerializeField] Button confirmButton;
+    [SerializeField] GameObject BuyButtons;
+    CameraSwitch cameraSwitch;
 
 
     public void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
+        cameraSwitch = FindAnyObjectByType<CameraSwitch>();
     }
 
     public void UpdatdeUIText()
