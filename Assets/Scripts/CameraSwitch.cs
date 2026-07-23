@@ -6,15 +6,22 @@ public class CameraSwitch : MonoBehaviour
     [SerializeField] Camera camera_TableView;
     [SerializeField] Camera camera_TopDown;
     [SerializeField] Camera camera_BarView;
-    [SerializeField] GameObject BarButtons;
+    [SerializeField] GameObject TableView;
+    [SerializeField] GameObject TopDownView;
+    [SerializeField] GameObject BarView;
 
     public string currentCamera;
     public void SwitchToCamera(string CameraToSwitchTo)
     {
 
-        camera_TopDown.gameObject.SetActive(false);
         camera_TableView.gameObject.SetActive(false);
+        TableView.gameObject.SetActive(false);
+
+        camera_TopDown.gameObject.SetActive(false);
+        TopDownView.gameObject.SetActive(false);
+
         camera_BarView.gameObject.SetActive(false);
+        BarView.gameObject.SetActive(false);
 
         if (CameraToSwitchTo == "TableView")
         {
@@ -24,6 +31,7 @@ public class CameraSwitch : MonoBehaviour
             camera_TableView.enabled = true;
             camera_TableView.gameObject.SetActive(true);
             currentCamera = "TableCamera";
+            TableView.gameObject.SetActive(true);
         }
         else if (CameraToSwitchTo == "TopDown")
         {
@@ -33,6 +41,7 @@ public class CameraSwitch : MonoBehaviour
             camera_TopDown.enabled = true;
             camera_TopDown.gameObject.SetActive(true);
             currentCamera = "TopCamera";
+            TopDownView.gameObject.SetActive(true);
         }
         else if (CameraToSwitchTo == "BarView")
         {
@@ -42,7 +51,7 @@ public class CameraSwitch : MonoBehaviour
             camera_BarView.enabled = true;
             camera_BarView.gameObject.SetActive(true);
             currentCamera = "BarCamera";
-            BarButtons.gameObject.SetActive(true);
+            BarView.gameObject.SetActive(true);
         }
         Debug.Log("Current Camera: " + currentCamera);
     }
