@@ -42,7 +42,7 @@ public class CameraSwitch : MonoBehaviour
             camera_BarView.enabled = true;
             camera_BarView.gameObject.SetActive(true);
             currentCamera = "BarCamera";
-            BarButtons.gameObject.SetActive(false);
+            BarButtons.gameObject.SetActive(true);
         }
         Debug.Log("Current Camera: " + currentCamera);
     }
