@@ -6,6 +6,7 @@ public class GameLoop : MonoBehaviour
     UserInterface userInterface;
     CameraSwitch cameraSwitch;
     PlayerReady playerReadyScript;
+    D6_DiceRoll d6_DiceRollScript;
 
     int totatlDMG = 0;
     int totatlDefence = 0;
@@ -15,6 +16,7 @@ public class GameLoop : MonoBehaviour
         userInterface = FindAnyObjectByType<UserInterface>();
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
         playerReadyScript = GetComponent<PlayerReady>();
+        d6_DiceRollScript = FindAnyObjectByType<D6_DiceRoll>();
     }
 
     public void GameLoop_Method()
@@ -38,16 +40,27 @@ public class GameLoop : MonoBehaviour
                 // calculate result of cards played
                 for (int i = 0; i < gameManager.chosen_Cards.Count; i++)
                 {
+                    //
+                    int rando_nr = d6_DiceRollScript.RollD6();
+
+                    // Check the type of card and add its value to the total damage or total defence
                     if (gameManager.chosen_Cards[i].GetComponent<AttackCard>())
                     {
-                        totatlDMG += gameManager.chosen_Cards[i].GetComponent<AttackCard>().Damage;
+                        totatlDMG += rando_nr;
+                        Debug.Log("Dice Value rolled: " + rando_nr);
+                        Debug.Log("Total Damage: " + totatlDMG);
+                        //totatlDMG += gameManager.chosen_Cards[i].GetComponent<AttackCard>().Damage;
                     }
                     else if (gameManager.chosen_Cards[i].GetComponent<DefenceCard>())
                     {
-                        totatlDefence += gameManager.chosen_Cards[i].GetComponent<DefenceCard>().Defence_Value;
+                        totatlDefence += rando_nr;
+                        Debug.Log("Dice Value rolled: " + rando_nr);
+                        Debug.Log("Total Defence: " + totatlDefence);
+                        //totatlDefence += gameManager.chosen_Cards[i].GetComponent<DefenceCard>().Defence_Value;
                     }
                     else if (gameManager.chosen_Cards[i].GetComponent<SpecialCard>())
                     {
+                        // rando_nr, meant to be used once special cards are implemented...
                         gameManager.chosen_Cards[i].GetComponent<SpecialCard>();
                     }
                 }
