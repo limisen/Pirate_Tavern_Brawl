@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     GameLoop Encounter_Loop;
     CameraSwitch cameraSwitch;
     UserInterface userInterface;
+    D6_DiceRoll d6_DiceRollScript;
 
     //Debug for set current camera
     public bool tableView = false;
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
         userInterface = FindAnyObjectByType<UserInterface>();
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
         gameLoop = FindAnyObjectByType<GameLoop>();
+        d6_DiceRollScript = FindAnyObjectByType<D6_DiceRoll>();
 
         // start of Encounter
         coins_Available = 50;
