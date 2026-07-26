@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public CameraSwitch cameraSwitch;
     public UserInterface userInterface;
     D6_DiceRoll d6_DiceRollScript;
-    public PopulateCardList populateCardList;
+    public PopulateCards populateCards;
 
     //Debug for set current camera
     public bool tableView = false;
@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public bool fury_drink_aquired = false;
 
     public List<CardInteract> chosen_Cards = new();
+    public List<GameObject> opponentsCardList = new();
 
     public bool player_Ready;
     public bool player_ReadyToReturn;
@@ -37,9 +38,10 @@ public class GameManager : MonoBehaviour
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
         gameLoop = FindAnyObjectByType<GameLoop>();
         d6_DiceRollScript = FindAnyObjectByType<D6_DiceRoll>();
-        populateCardList = FindAnyObjectByType<PopulateCardList>();
+        populateCards = FindAnyObjectByType<PopulateCards>();
 
-        populateCardList.PopulateCards();
+        populateCards.PopulateCardList();
+        opponentsCardList = populateCards.PopulateOpponentCards();
 
         userInterface.UpdatdeUIText();
 
@@ -49,10 +51,10 @@ public class GameManager : MonoBehaviour
     {
         gameLoop.GameLoop_Method();
 
-        // Refill the card list if it is empty
-        if (populateCardList.ParentObject.transform.childCount == 0 && cameraSwitch.currentCamera == "TableCamera")
+        // Refill the Player's card list if it is empty
+        if (populateCards.ParentObject.transform.childCount == 0 && cameraSwitch.currentCamera == "TableCamera")
         {
-            populateCardList.PopulateCards();
+            populateCards.PopulateCardList();
         }
 
         if (player_HP <= 0)

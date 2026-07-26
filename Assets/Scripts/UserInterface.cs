@@ -101,12 +101,12 @@ public class UserInterface : MonoBehaviour
             gameManager.userInterface.UpdatdeUIText();
 
             // Destroy all the cards in the card list before repopulating it
-            for (int i = 0; i < gameManager.populateCardList.ParentObject.transform.childCount; i++)
+            for (int i = 0; i < gameManager.populateCards.ParentObject.transform.childCount; i++)
             {
-                Destroy(gameManager.populateCardList.ParentObject.transform.GetChild(i).gameObject);
+                Destroy(gameManager.populateCards.ParentObject.transform.GetChild(i).gameObject);
             }
 
-            gameManager.populateCardList.PopulateCards();
+            gameManager.populateCards.PopulateCardList();
         }
         else
         {
@@ -187,10 +187,10 @@ public class UserInterface : MonoBehaviour
         gameManager.fury_drink_aquired = false;
 
         // Destroy all the cards in the card list before repopulating it
-        for (int i = 0; i < gameManager.populateCardList.ParentObject.transform.childCount; i++)
+        for (int i = 0; i < gameManager.populateCards.ParentObject.transform.childCount; i++)
         {
-            Destroy(gameManager.populateCardList.ParentObject.transform.GetChild(i).gameObject);
+            Destroy(gameManager.populateCards.ParentObject.transform.GetChild(i).gameObject);
         }
-        gameManager.populateCardList.PopulateCards();
+        gameManager.populateCards.PopulateCardList();
     }
 }

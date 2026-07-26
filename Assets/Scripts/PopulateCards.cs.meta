@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0283b88273d24d9468ab41bbe0946b3f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ParentObject: {instanceID: 0}
+  - AttackCardPrefab: {fileID: 4202990657420990820, guid: c9fe35c4c98f7b444b6965ce8d08c806, type: 3}
+  - DefenceCardPrefab: {fileID: 4202990657420990820, guid: 8925c10d85d3450479193f6278f041ba, type: 3}
+  - SpecialCardPrefab: {fileID: 4202990657420990820, guid: 1c573a1b28ae0aa48a780971438837dc, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
