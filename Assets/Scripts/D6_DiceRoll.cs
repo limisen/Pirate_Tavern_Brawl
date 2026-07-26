@@ -3,14 +3,14 @@ using UnityEngine;
 public class D6_DiceRoll : MonoBehaviour
 {
     [SerializeField] int dice_Roll_Debug_Value = 0; // for testing purposes, set this value to a number between 1 and 6 to simulate a dice roll
-    public int RollD6()
+    public int RollD6(int min, int maxInclusive)
     {
         // get the animator controller components dice_value in order to set the animation/frame to the correct dice value rolled
         Animator animator = GetComponent<Animator>();
 
-        int diceRoll = Random.Range(1, 7);
-        Debug.Log("D6 Dice Roll Result: " + diceRoll);
-        Debug.Log("D6 Debug Dice Roll Result: " + dice_Roll_Debug_Value);
+        int diceRoll = Random.Range(min, maxInclusive + 1);
+        //Debug.Log("D6 Dice Roll Result: " + diceRoll);
+        //Debug.Log("D6 Debug Dice Roll Result: " + dice_Roll_Debug_Value);
 
         if (diceRoll == 1 || dice_Roll_Debug_Value == 1)
         {
@@ -50,7 +50,7 @@ public class D6_DiceRoll : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Invalid dice roll value: " + diceRoll);
+            Debug.LogError("Invalid dice roll, value outside expected range, Dice Roll Value: " + diceRoll);
             return 0;
         }
     }

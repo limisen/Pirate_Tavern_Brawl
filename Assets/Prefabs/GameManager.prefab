@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3428718693814189465}
   - component: {fileID: 463916973779400546}
   - component: {fileID: 7304402708071266557}
+  - component: {fileID: 1644976103253864655}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,16 +47,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89051c3f4af04b445a005e13820cb0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  ParentObject: {fileID: 0}
-  AttackCardPrefab: {fileID: 4202990657420990820, guid: c9fe35c4c98f7b444b6965ce8d08c806, type: 3}
-  DefenceCardPrefab: {fileID: 4202990657420990820, guid: 8925c10d85d3450479193f6278f041ba, type: 3}
-  SpecialCardPrefab: {fileID: 4202990657420990820, guid: 1c573a1b28ae0aa48a780971438837dc, type: 3}
-  coins_Available: 0
-  costs_Of_Card: 0
-  player_HP: 0
-  opponent_HP: 0
+  cameraSwitch: {fileID: 0}
+  userInterface: {fileID: 0}
+  populateCardList: {fileID: 0}
+  tableView: 0
+  topView: 0
+  barView: 1
+  coins_Available: 50
+  player_HP: 30
+  player_MaxHP: 30
+  opponent_HP: 30
+  opponent_MaxHP: 30
+  health_drink_aquired: 0
+  greed_drink_aquired: 0
+  fury_drink_aquired: 0
   chosen_Cards: []
   player_Ready: 0
+  player_ReadyToReturn: 0
 --- !u!114 &463916973779400546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf2e2a3fa1a44647b49cc641c9bb5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameLoop
+  Dice: {fileID: 7760596923899981694, guid: ba8cac3186e938b4485b563daf0c2632, type: 3}
 --- !u!114 &7304402708071266557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,3 +90,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerReady
   playArea: {fileID: 0}
+  startPos: {x: -7.6, y: 1.6, z: 0}
+  cardSpacing: {x: 2, y: 0, z: 0}
+  cardScale: {x: 0.37, y: 0.37, z: 1}
+--- !u!114 &1644976103253864655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2352680126373546414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0283b88273d24d9468ab41bbe0946b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopulateCardList
+  ParentObject: {fileID: 0}
+  AttackCardPrefab: {fileID: 4202990657420990820, guid: c9fe35c4c98f7b444b6965ce8d08c806, type: 3}
+  AttackCardPortrait:
+  - {fileID: 867309792, guid: 7547161a4490fb64b8b62d0f4af505b7, type: 3}
+  - {fileID: -1380414440, guid: a16f9c93e42c1664e887a92dc11f6aad, type: 3}
+  - {fileID: -1039126597, guid: 5e24260a79087b44988477936dabfb94, type: 3}
+  DefenceCardPrefab: {fileID: 4202990657420990820, guid: 8925c10d85d3450479193f6278f041ba, type: 3}
+  DefenceCardPortrait:
+  - {fileID: 1419100276, guid: 5a251fd886e9fe446a061abfdb9cf080, type: 3}
+  - {fileID: -58332866, guid: ab387197d3226a54c9e1641b27767f8a, type: 3}
+  SpecialCardPrefab: {fileID: 4202990657420990820, guid: 1c573a1b28ae0aa48a780971438837dc, type: 3}
+  SpecialCardPortrait:
+  - {fileID: -996108387, guid: 0efb928680875bf4ab83052454e0db94, type: 3}
+  - {fileID: -1820627191, guid: 57a5e9073279ec84ca389f52e59ee3a5, type: 3}
+  costs_Of_Card: 3

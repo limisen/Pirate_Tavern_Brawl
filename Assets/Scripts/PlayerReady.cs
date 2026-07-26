@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerReady : MonoBehaviour
@@ -34,11 +33,14 @@ public class PlayerReady : MonoBehaviour
 
                 gameManager.chosen_Cards[i].transform.localScale = cardScale;
 
+                gameManager.chosen_Cards[i].GetComponent<SpriteRenderer>().sortingOrder = 1;
+
                 gameManager.chosen_Cards[i].GetComponent<CardClass>().cardNoInteract = true;
 
                 gameManager.chosen_Cards[i].transform.localPosition = startPos + (cardSpacing * col);
                 col++;
             }
+            startPos = new Vector3(-7.6f, 1.6f, 0);
         }
     }
 }

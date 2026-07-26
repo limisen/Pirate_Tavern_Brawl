@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +12,6 @@ public class UserInterface : MonoBehaviour
     [SerializeField] GameObject BuyButtons;
 
     // Enemy stuffs
-
     [SerializeField] Text enemy_health_counter;
 
     // Power-Ups at the Bar
@@ -23,7 +21,6 @@ public class UserInterface : MonoBehaviour
 
     [SerializeField] Image opponentHealthbar;
     [SerializeField] Sprite[] healthBar;
-    public int debugIndex = 1;
 
     CameraSwitch cameraSwitch;
 
@@ -36,37 +33,85 @@ public class UserInterface : MonoBehaviour
     public void UpdatdeUIText()
     {
         coins.text = gameManager.coins_Available.ToString();
-        player_health_counter.text = gameManager.player_HP.ToString();
-        enemy_health_counter.text = gameManager.opponent_HP.ToString();
-        UpdateUI_health(gameManager.opponent_HP, 30);
+        player_health_counter.text = "Player HP: " + gameManager.player_HP.ToString();
+        enemy_health_counter.text = "Enemy HP: " + gameManager.opponent_HP.ToString();
+        UpdateUI_health(gameManager.opponent_HP, gameManager.opponent_MaxHP);
     }
 
     public void UpdateUI_health(int HP, int maxHP)
     {
-        // Alvin's probalby good code but unnessesary 
-        //Debug.Log("Opponent HP" + HP.ToString());
-        //float hpRatio = maxHP / HP;
-        //Debug.Log("Ratio" + hpRatio.ToString());
-        //int spriteI = Mathf.Clamp(Mathf.Floor(healthBar.Length * hpRatio), 0f, healthBar.Length - 1).ConvertTo<int>();
-        //Debug.Log("SpriteI" + spriteI.ToString());
-        //opponentHealthbar.sprite = healthBar[spriteI];
+        if (maxHP != 30)
+        {
+            // math to get the ratio of the current HP to the max HP, then use that ratio to determine which sprite to use for the health bar
+            Debug.Log("Opponent HP" + HP.ToString());
+            float hpRatio = (float)HP / maxHP;
+            Debug.Log("Ratio" + hpRatio.ToString());
+            int spriteI = ((int)Mathf.Clamp(Mathf.Floor(healthBar.Length * hpRatio), 0f, healthBar.Length - 1));
+            Debug.Log("SpriteI" + spriteI.ToString());
+            opponentHealthbar.sprite = healthBar[spriteI];
+        }
+        else if (maxHP == 30)
+        {
+            //Debug.Log("pre division: " + HP.ToString());
+            HP = (HP / 2); // use for normal play
+                           //HP = (debugIndex / 2); // use for debug purposes
+                           //Debug.Log("post division: " + HP.ToString());
 
-        Debug.Log("pre division: " + HP.ToString());
-        HP = (HP / 2); // use for normal play
-        //HP = (debugIndex / 2); // use for debug purposes
-        Debug.Log("post division: "+ HP.ToString());
-
-        //opponentHealthbar.sprite = healthBar[HP]; //use this one for debugging, min value 0, max 14
-        opponentHealthbar.sprite = healthBar[HP - 1]; //use this one for normal play min value 0, max 14
+            //opponentHealthbar.sprite = healthBar[HP]; //use this one for debugging, min value 0, max 14
+            if (HP == 1 || HP <= 0)
+            {
+                opponentHealthbar.sprite = healthBar[0];
+            }
+            else
+            {
+                opponentHealthbar.sprite = healthBar[HP - 1]; //use this one for normal play min value 0, max 14
+            }
+        }
     }
-
-
 
     public void buttonPress()
     {
         Debug.Log("confirm button pressed");
-        gameManager.player_Ready = true;
-        FindAnyObjectByType<CameraSwitch>().SwitchToCamera("TopDown");
+        if (gameManager.opponent_HP <= 0 && gameManager.player_HP > 0)
+        {
+            // Opponent is dead, You can stop gloating now. Head over to the bar!
+            Debug.Log("changing camera to BarView");
+            gameManager.cameraSwitch.SwitchToCamera("BarView");
+        }
+        else if (gameManager.player_HP <= 0)
+        {
+            Debug.Log("Player is dead, game over");
+        }
+        else if (gameManager.opponent_HP > 0 && gameManager.player_HP > 0)
+        {
+            // both parties are still alive, switching to TopDown before continuing play
+            gameManager.player_Ready = true;
+            Debug.Log("changing camera to TopDown");
+            gameManager.cameraSwitch.SwitchToCamera("TopDown");
+        }
+    }
+
+    public void RefillCardsButtonPress()
+    {
+        Debug.Log("Refill Cards button pressed");
+
+        if (gameManager.chosen_Cards.Count == 0)
+        {
+            gameManager.coins_Available -= 6;
+            gameManager.userInterface.UpdatdeUIText();
+
+            // Destroy all the cards in the card list before repopulating it
+            for (int i = 0; i < gameManager.populateCardList.ParentObject.transform.childCount; i++)
+            {
+                Destroy(gameManager.populateCardList.ParentObject.transform.GetChild(i).gameObject);
+            }
+
+            gameManager.populateCardList.PopulateCards();
+        }
+        else
+        {
+            Debug.Log("But player has already chosen cards to play, cannot refill cards");
+        }
     }
 
     public void buyButtonOne(Button buttonOne)
@@ -74,6 +119,8 @@ public class UserInterface : MonoBehaviour
         Debug.Log("Buy Health Drink");
         health_drink.gameObject.SetActive(false);
         buttonOne.gameObject.SetActive(false);
+
+        gameManager.health_drink_aquired = true;
     }
 
     public void buyButtonTwo(Button buttonTwo)
@@ -82,6 +129,7 @@ public class UserInterface : MonoBehaviour
         greed_drink.gameObject.SetActive(false);
         buttonTwo.gameObject.SetActive(false);
 
+        gameManager.greed_drink_aquired = true;
     }
 
     public void buyButtonThree(Button buttonThree)
@@ -89,21 +137,60 @@ public class UserInterface : MonoBehaviour
         Debug.Log("Buy Fury Drink");
         fury_drink.gameObject.SetActive(false);
         buttonThree.gameObject.SetActive(false);
-
+        
+        gameManager.fury_drink_aquired = true;
     }
     public void doneWithCheckingResults()
     {
-        if (gameManager.opponent_HP > 0)
-        {
-            Debug.Log("Changing Camera To TableView");
-            cameraSwitch.SwitchToCamera("TableView");
-            gameManager.player_ReadyToReturn = true;
-        } 
-        else if (gameManager.opponent_HP <= 0)
+        Debug.Log("Player is done with checking the results of cards played");
+        if (gameManager.opponent_HP <= 0)
         {
             Debug.Log("Changing Camera To BarView");
             cameraSwitch.SwitchToCamera("BarView");
             gameManager.player_ReadyToReturn = true;
         }
+        else if (gameManager.opponent_HP > 0)
+        {
+            Debug.Log("Changing Camera To TableView");
+            cameraSwitch.SwitchToCamera("TableView");
+            gameManager.player_ReadyToReturn = true;
+        }
+    }
+    public void DoneWithUpgrades()
+    {
+        Debug.Log("Player is done with buying upgrades");
+        Debug.Log("Changing Camera To TableView");
+        cameraSwitch.SwitchToCamera("TableView");
+
+        if (gameManager.health_drink_aquired)
+        {
+            gameManager.player_MaxHP += 10;
+        }
+        if (gameManager.greed_drink_aquired)
+        {
+            gameManager.coins_Available += 10;
+        }
+        if (gameManager.fury_drink_aquired)
+        {
+            gameManager.opponent_MaxHP -= 10;
+        }
+
+        // Reset the HP values for a new encounter
+        gameManager.player_HP = gameManager.player_MaxHP;
+        gameManager.opponent_HP = gameManager.opponent_MaxHP;
+        // Update the UI to reflect the new HP values
+        UpdatdeUIText();
+
+        // Reset the drink acquisition flags for the next encounter (otherwise the opponent HP will be reduced by 10 every time the player goes to the bar, even if they don't buy the drink)
+        gameManager.health_drink_aquired = false;
+        gameManager.greed_drink_aquired = false;
+        gameManager.fury_drink_aquired = false;
+
+        // Destroy all the cards in the card list before repopulating it
+        for (int i = 0; i < gameManager.populateCardList.ParentObject.transform.childCount; i++)
+        {
+            Destroy(gameManager.populateCardList.ParentObject.transform.GetChild(i).gameObject);
+        }
+        gameManager.populateCardList.PopulateCards();
     }
 }
