@@ -4,7 +4,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     GameLoop gameLoop;
-    GameLoop Encounter_Loop;
     public CameraSwitch cameraSwitch;
     public UserInterface userInterface;
     D6_DiceRoll d6_DiceRollScript;
@@ -26,8 +25,10 @@ public class GameManager : MonoBehaviour
     public bool greed_drink_aquired = false;
     public bool fury_drink_aquired = false;
 
-    public List<CardInteract> chosen_Cards = new();
-    public List<GameObject> opponentsCardList = new();
+    public List<GameObject> opponentsCardList = new ();
+    public List<CardClass> opponentsChosenCards = new();
+
+    public List<CardInteract> chosen_Cards = new(); // List of cards the player has chosen to play
 
     public bool player_Ready;
     public bool player_ReadyToReturn;
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
         populateCards.PopulateCardList();
         opponentsCardList = populateCards.PopulateOpponentCards();
 
-        userInterface.UpdatdeUIText();
+        userInterface.UpdateUIText();
 
         cameraSwitch.SwitchToCamera("TableView");
     }

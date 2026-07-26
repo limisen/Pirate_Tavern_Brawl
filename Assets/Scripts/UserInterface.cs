@@ -30,7 +30,7 @@ public class UserInterface : MonoBehaviour
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
     }
 
-    public void UpdatdeUIText()
+    public void UpdateUIText()
     {
         coins.text = gameManager.coins_Available.ToString();
         player_health_counter.text = "Player HP: " + gameManager.player_HP.ToString();
@@ -98,7 +98,7 @@ public class UserInterface : MonoBehaviour
         if (gameManager.chosen_Cards.Count == 0)
         {
             gameManager.coins_Available -= 6;
-            gameManager.userInterface.UpdatdeUIText();
+            gameManager.userInterface.UpdateUIText();
 
             // Destroy all the cards in the card list before repopulating it
             for (int i = 0; i < gameManager.populateCards.ParentObject.transform.childCount; i++)
@@ -179,7 +179,7 @@ public class UserInterface : MonoBehaviour
         gameManager.player_HP = gameManager.player_MaxHP;
         gameManager.opponent_HP = gameManager.opponent_MaxHP;
         // Update the UI to reflect the new HP values
-        UpdatdeUIText();
+        UpdateUIText();
 
         // Reset the drink acquisition flags for the next encounter (otherwise the opponent HP will be reduced by 10 every time the player goes to the bar, even if they don't buy the drink)
         gameManager.health_drink_aquired = false;

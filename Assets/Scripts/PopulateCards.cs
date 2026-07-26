@@ -6,6 +6,7 @@ public class PopulateCards : MonoBehaviour
 {
     // Where the cards will be instantiated as children of this object
     [SerializeField, Tooltip("The parent object used for when instantiatig cards. (Cards get instantiated as children of this object)")] public GameObject ParentObject;
+    [SerializeField, Tooltip("The parent object used for when instantiatig cards. (Cards get instantiated as children of this object, Keep it out of sight)")] public GameObject OpponentParentObject;
 
     [SerializeField] GameObject AttackCardPrefab;
     [SerializeField] List<Sprite> AttackCardPortrait;
@@ -16,7 +17,6 @@ public class PopulateCards : MonoBehaviour
     [SerializeField] GameObject SpecialCardPrefab;
     [SerializeField] List<Sprite> SpecialCardPortrait;
 
-    public int costs_Of_Card = 3;
     public void PopulateCardList()
     {
         // List of positons on the cardList for where the cards will be instantiated
@@ -47,8 +47,8 @@ public class PopulateCards : MonoBehaviour
 
                 int attackPortraitIndex = Random.Range(0, AttackCardPortrait.Count);
 
-                attackCard.Card_Portrait = AttackCardPortrait[attackPortraitIndex];
-                Card.GetComponent<SpriteRenderer>().sprite = attackCard.Card_Portrait;
+                attackCard.Card_front = AttackCardPortrait[attackPortraitIndex];
+                Card.GetComponent<SpriteRenderer>().sprite = attackCard.Card_front;
 
                 if (attackPortraitIndex == 0)
                 {
@@ -59,7 +59,8 @@ public class PopulateCards : MonoBehaviour
 
                     attackCard.Card_Description = "Attack Card Description";
 
-                    attackCard.Damage = Random.Range(1, 3);
+                    attackCard.minDamage = 1;
+                    attackCard.maxDamage = 3;
 
                     attackCard.condition = Conditions.none;
                 }
@@ -72,7 +73,8 @@ public class PopulateCards : MonoBehaviour
 
                     attackCard.Card_Description = "Attack Card Description";
 
-                    attackCard.Damage = Random.Range(2, 4);
+                    attackCard.minDamage = 2;
+                    attackCard.maxDamage = 4;
 
                     attackCard.condition = Conditions.none;
                 }
@@ -85,7 +87,8 @@ public class PopulateCards : MonoBehaviour
 
                     attackCard.Card_Description = "Attack Card Description";
 
-                    attackCard.Damage = Random.Range(1, 2);
+                    attackCard.minDamage = 1;
+                    attackCard.maxDamage = 2;
 
                     attackCard.condition = Conditions.none;
                 }
@@ -100,8 +103,8 @@ public class PopulateCards : MonoBehaviour
 
                 int defencePortraitIndex = Random.Range(0, DefenceCardPortrait.Count);
 
-                defenceCard.Card_Portrait = DefenceCardPortrait[defencePortraitIndex];
-                Card.GetComponent<SpriteRenderer>().sprite = defenceCard.Card_Portrait;
+                defenceCard.Card_front = DefenceCardPortrait[defencePortraitIndex];
+                Card.GetComponent<SpriteRenderer>().sprite = defenceCard.Card_front;
 
                 if (defencePortraitIndex == 0)
                 {
@@ -112,7 +115,8 @@ public class PopulateCards : MonoBehaviour
 
                     defenceCard.Card_Description = "Defence Card Description";
 
-                    defenceCard.Defence_Value = Random.Range(1, 3);
+                    defenceCard.minDefence_Value = 1;
+                    defenceCard.maxDefence_Value = 3;
 
                     defenceCard.condition = Conditions.none;
                 }
@@ -125,7 +129,8 @@ public class PopulateCards : MonoBehaviour
 
                     defenceCard.Card_Description = "Defence Card Description";
 
-                    defenceCard.Defence_Value = Random.Range(2, 4);
+                    defenceCard.minDefence_Value = 2;
+                    defenceCard.maxDefence_Value = 4;
 
                     defenceCard.condition = Conditions.none;
                 }
@@ -140,8 +145,8 @@ public class PopulateCards : MonoBehaviour
 
                 int specialPortraitIndex = Random.Range(0, SpecialCardPortrait.Count);
 
-                specialCard.Card_Portrait = SpecialCardPortrait[specialPortraitIndex];
-                Card.GetComponent<SpriteRenderer>().sprite = specialCard.Card_Portrait;
+                specialCard.Card_front = SpecialCardPortrait[specialPortraitIndex];
+                Card.GetComponent<SpriteRenderer>().sprite = specialCard.Card_front;
 
                 if (specialPortraitIndex == 0)
                 {
@@ -183,16 +188,18 @@ public class PopulateCards : MonoBehaviour
             // Randomly select a card type (0 = Attack, 1 = Defence, 2 = Special)
             int cardType = Random.Range(0, 3);
 
-            if (cardType == 0) // Attack Card
+            // Attack Card
+            if (cardType == 0)
             {
-                GameObject Card = AttackCardPrefab;
-                
+                GameObject Card = Instantiate(AttackCardPrefab, OpponentParentObject.transform);
+                Card.transform.localPosition += new Vector3 (1 * i, 0, 0);
+
                 AttackCard attackCard = Card.GetComponent<AttackCard>();
 
                 int attackPortraitIndex = Random.Range(0, AttackCardPortrait.Count);
 
-                attackCard.Card_Portrait = AttackCardPortrait[attackPortraitIndex];
-                Card.GetComponent<SpriteRenderer>().sprite = attackCard.Card_Portrait;            
+                attackCard.Card_front = AttackCardPortrait[attackPortraitIndex];
+                Card.GetComponent<SpriteRenderer>().sprite = attackCard.Card_front;            
 
                 if (attackPortraitIndex == 0)
                 {
@@ -203,7 +210,8 @@ public class PopulateCards : MonoBehaviour
 
                     attackCard.Card_Description = "Attack Card Description";
 
-                    attackCard.Damage = Random.Range(1, 3);
+                    attackCard.minDamage = 1;
+                    attackCard.maxDamage = 3;
 
                     attackCard.condition = Conditions.none;
                 }
@@ -216,7 +224,8 @@ public class PopulateCards : MonoBehaviour
 
                     attackCard.Card_Description = "Attack Card Description";
 
-                    attackCard.Damage = Random.Range(2, 4);
+                    attackCard.minDamage = 2;
+                    attackCard.maxDamage = 4;
 
                     attackCard.condition = Conditions.none;
                 }
@@ -229,23 +238,26 @@ public class PopulateCards : MonoBehaviour
                     
                     attackCard.Card_Description = "Attack Card Description";
                     
-                    attackCard.Damage = Random.Range(1, 2);
+                    attackCard.minDamage = 1;
+                    attackCard.maxDamage = 2;
                     
                     attackCard.condition = Conditions.none;
                 }
                 opponentsCards.Add(Card);
             } // end of if (cardType == 0) // Attack Card
 
-            else if (cardType == 1) // Defence Card
+            // Defence Card
+            else if (cardType == 1)
             {
-                GameObject Card = DefenceCardPrefab;
+                GameObject Card = Instantiate(DefenceCardPrefab, OpponentParentObject.transform);
+                Card.transform.localPosition += new Vector3 (1 * i, 0, 0);
 
                 DefenceCard defenceCard = Card.GetComponent<DefenceCard>();
 
                 int defencePortraitIndex = Random.Range(0, DefenceCardPortrait.Count);
 
-                defenceCard.Card_Portrait = DefenceCardPortrait[defencePortraitIndex];
-                Card.GetComponent<SpriteRenderer>().sprite = defenceCard.Card_Portrait;
+                defenceCard.Card_front = DefenceCardPortrait[defencePortraitIndex];
+                Card.GetComponent<SpriteRenderer>().sprite = defenceCard.Card_front;
 
                 if (defencePortraitIndex == 0)
                 {
@@ -256,7 +268,8 @@ public class PopulateCards : MonoBehaviour
 
                     defenceCard.Card_Description = "Defence Card Description";
 
-                    defenceCard.Defence_Value = Random.Range(1, 3);
+                    defenceCard.minDefence_Value = 1;
+                    defenceCard.maxDefence_Value = 3;
 
                     defenceCard.condition = Conditions.none;
                 }
@@ -269,23 +282,26 @@ public class PopulateCards : MonoBehaviour
 
                     defenceCard.Card_Description = "Defence Card Description";
 
-                    defenceCard.Defence_Value = Random.Range(2, 4);
+                    defenceCard.minDefence_Value = 2;
+                    defenceCard.maxDefence_Value = 4;
 
                     defenceCard.condition = Conditions.none;
                 }
                 opponentsCards.Add(Card);
             } // end of else if (cardType == 1) // Defence Card
 
-            else if (cardType == 2) // Special Card
+            // Special Card
+            else if (cardType == 2)
             {
-                GameObject Card = SpecialCardPrefab;
+                GameObject Card = Instantiate(SpecialCardPrefab, OpponentParentObject.transform);
+                Card.transform.localPosition += new Vector3 (1 * i, 0, 0);
 
                 SpecialCard specialCard = Card.GetComponent<SpecialCard>();
 
                 int specialPortraitIndex = Random.Range(0, SpecialCardPortrait.Count);
 
-                specialCard.Card_Portrait = SpecialCardPortrait[specialPortraitIndex];
-                Card.GetComponent<SpriteRenderer>().sprite = specialCard.Card_Portrait;
+                specialCard.Card_front = SpecialCardPortrait[specialPortraitIndex];
+                Card.GetComponent<SpriteRenderer>().sprite = specialCard.Card_front;
 
                 if (specialPortraitIndex == 0)
                 {

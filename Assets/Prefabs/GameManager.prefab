@@ -49,10 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   cameraSwitch: {fileID: 0}
   userInterface: {fileID: 0}
-  populateCardList: {fileID: 0}
+  populateCards: {fileID: 0}
   tableView: 0
   topView: 0
-  barView: 1
+  barView: 0
   coins_Available: 50
   player_HP: 30
   player_MaxHP: 30
@@ -61,6 +61,8 @@ MonoBehaviour:
   health_drink_aquired: 0
   greed_drink_aquired: 0
   fury_drink_aquired: 0
+  opponentsCardList: []
+  opponentsChosenCards: []
   chosen_Cards: []
   player_Ready: 0
   player_ReadyToReturn: 0
@@ -76,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf2e2a3fa1a44647b49cc641c9bb5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameLoop
-  Dice: {fileID: 7760596923899981694, guid: ba8cac3186e938b4485b563daf0c2632, type: 3}
+  Dice: {fileID: 0}
 --- !u!114 &7304402708071266557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586e71020d6aa594b858bb9d0a79c655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerReady
-  playArea: {fileID: 0}
+  playerPlayArea: {fileID: 0}
+  opponentPlayArea: {fileID: 0}
   startPos: {x: -7.6, y: 1.6, z: 0}
   cardSpacing: {x: 2, y: 0, z: 0}
   cardScale: {x: 0.37, y: 0.37, z: 1}
@@ -119,4 +122,3 @@ MonoBehaviour:
   SpecialCardPortrait:
   - {fileID: -996108387, guid: 0efb928680875bf4ab83052454e0db94, type: 3}
   - {fileID: -1820627191, guid: 57a5e9073279ec84ca389f52e59ee3a5, type: 3}
-  costs_Of_Card: 3

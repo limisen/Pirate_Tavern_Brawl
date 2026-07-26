@@ -90,7 +90,7 @@ public class CardInteract : MonoBehaviour
             gameObject.GetComponent<CardClass>().cardNoInteract = true; // make it so we cant interact with the card anymore
 
             gameManager.coins_Available -= gameObject.GetComponent<CardClass>().Cost_of_Card;
-            gameManager.userInterface.UpdatdeUIText();
+            gameManager.userInterface.UpdateUIText();
         }
         else if ((CardSelected == false || onCard == false || is_in_playbox == false) && cardClass.cardNoInteract == false) // if we arent hovering over a card or holding down M1 on it, return it to the scale, rotation and position it was at the start.
         {

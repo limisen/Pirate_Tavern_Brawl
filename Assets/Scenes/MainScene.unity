@@ -408,21 +408,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 463916973779400546, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: Dice
+      value: 
+      objectReference: {fileID: 1731961426}
     - target: {fileID: 1644976103253864655, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: ParentObject
       value: 
       objectReference: {fileID: 861345656}
+    - target: {fileID: 1644976103253864655, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: OpponentParentObject
+      value: 
+      objectReference: {fileID: 1084069793}
     - target: {fileID: 2352680126373546414, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 6066914187363243636, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.96236
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6066914187363243636, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27231
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6066914187363243636, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -457,9 +465,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
-      propertyPath: playArea
+      propertyPath: playerPlayArea
       value: 
       objectReference: {fileID: 1245983770}
+    - target: {fileID: 7304402708071266557, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: opponentPlayArea
+      value: 
+      objectReference: {fileID: 1165069832}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1400,6 +1412,37 @@ Transform:
   - {fileID: 1129674984}
   m_Father: {fileID: 1838613311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1084069793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084069794}
+  m_Layer: 0
+  m_Name: OpponentParentObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084069794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084069793}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15, y: 14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1838613311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1128396666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,7 +1653,7 @@ Transform:
   m_GameObject: {fileID: 1165069832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.5, y: 4.5, z: -2}
+  m_LocalPosition: {x: -11.5, y: 1, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1989,6 +2032,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &1731961426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7760596923899981694, guid: ba8cac3186e938b4485b563daf0c2632, type: 3}
+  m_PrefabInstance: {fileID: 4027046416949436615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1751957959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,6 +2226,7 @@ Transform:
   - {fileID: 2061724970}
   - {fileID: 1046781312}
   - {fileID: 1751957960}
+  - {fileID: 1084069794}
   - {fileID: 861345655}
   - {fileID: 352414059}
   - {fileID: 1128396667}

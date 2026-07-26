@@ -1,9 +1,11 @@
 public class AttackCard : CardClass
 {
-    public int Damage;
-    public void Attack(int DMG, int Cost, CardClass.Conditions con)
+    public int minDamage;
+    public int maxDamage;
+    public void Attack(int minDMG, int maxDMG, int Cost, CardClass.Conditions con)
     {
-        Damage = DMG;
+        minDamage = minDMG;
+        maxDamage = maxDMG;
         Cost_of_Card = Cost;
         condition = con;
     }
