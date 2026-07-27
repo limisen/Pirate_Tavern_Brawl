@@ -26,12 +26,16 @@ public class PlayerReady : MonoBehaviour
             int col = 0;
             Debug.Log("Moving ALL chosen cards to their respective play area");
             Debug.Log("Moving player's cards to the play area");
+
+            Vector3 newPlayerCardPos = startPlayerCardPos;
+            Vector3 newOpponentCardPos = startOpponentCardPos;
+
             for (int i = 0; i <= gameManager.chosen_Cards.Count - 1; i++)
             {
                 if (col == 5)
                 {
                     col = 0;
-                    startPlayerCardPos.y -= 1f;
+                    newPlayerCardPos.y -= 1f;
                 }
                 gameManager.chosen_Cards[i].transform.SetParent(playerPlayArea.transform);
 
@@ -41,30 +45,30 @@ public class PlayerReady : MonoBehaviour
 
                 gameManager.chosen_Cards[i].GetComponent<CardClass>().cardNoInteract = true;
 
-                gameManager.chosen_Cards[i].transform.localPosition = startPlayerCardPos + (cardSpacing * col);
+                gameManager.chosen_Cards[i].transform.localPosition = newPlayerCardPos + (cardSpacing * col);
                 col++;
             }
             Debug.Log("Player's cards have been moved to the play area");
 
             Debug.Log("Moving opponent's cards to the play area");
-            for (int i = 0; i < gameManager.opponentsCardList.Count; i++)
+            for (int i = 0; i < gameManager.opponentsChosenCards.Count; i++)
             {
                 if (col == 5)
                 {
                     col = 0;
-                    startOpponentCardPos.y += 1f;
+                    newOpponentCardPos.y += 1f;
                 }
-                gameManager.opponentsCardList[i].transform.SetParent(opponentPlayArea.transform);
+                gameManager.opponentsChosenCards[i].transform.SetParent(opponentPlayArea.transform);
 
-                gameManager.opponentsCardList[i].transform.localScale = cardScale;
+                gameManager.opponentsChosenCards[i].transform.localScale = cardScale;
 
-                gameManager.opponentsCardList[i].GetComponent<SpriteRenderer>().sortingOrder = 1;
+                gameManager.opponentsChosenCards[i].GetComponent<SpriteRenderer>().sortingOrder = 1;
 
-                gameManager.opponentsCardList[i].GetComponent<CardClass>().cardNoInteract = true;
+                gameManager.opponentsChosenCards[i].GetComponent<CardClass>().cardNoInteract = true;
 
-                gameManager.opponentsCardList[i].transform.localPosition = startOpponentCardPos + (cardSpacing * col);
+                gameManager.opponentsChosenCards[i].transform.localPosition = newOpponentCardPos + (cardSpacing * col);
 
-                gameManager.opponentsCardList[i].transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 180f));
+                gameManager.opponentsChosenCards[i].transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 180f));
                 col++;
             }
             Debug.Log("Opponent's cards have been moved to the play area");

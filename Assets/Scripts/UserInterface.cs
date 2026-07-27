@@ -52,12 +52,10 @@ public class UserInterface : MonoBehaviour
         }
         else if (maxHP == 30)
         {
-            //Debug.Log("pre division: " + HP.ToString());
-            HP = (HP / 2); // use for normal play
-                           //HP = (debugIndex / 2); // use for debug purposes
-                           //Debug.Log("post division: " + HP.ToString());
+            // Debug.Log("pre division: " + HP.ToString());
+            HP = (HP / 2);
+            // Debug.Log("post division: " + HP.ToString());
 
-            //opponentHealthbar.sprite = healthBar[HP]; //use this one for debugging, min value 0, max 14
             if (HP == 1 || HP <= 0)
             {
                 opponentHealthbar.sprite = healthBar[0];

@@ -142,7 +142,7 @@ public class GameLoop : MonoBehaviour
                     // Make it so that the dice is rendered above the card (sorting order 2)
                     CardDice.GetComponent<SpriteRenderer>().sortingOrder = 2;
                     // position the dice at the card's bottom left of the card (where the dmg is displayed) and scale it up to be visible
-                    CardDice.transform.localPosition = new Vector3(1.85f, 2.1f, 0);
+                    CardDice.transform.localPosition = new Vector3(-1.85f, -2.1f, 0);
                     CardDice.transform.localScale = new Vector3(2, 2, 1);
 
                     // Roll the dice for the attack card and get the result
@@ -159,7 +159,7 @@ public class GameLoop : MonoBehaviour
                     GameObject CardDice = Instantiate(Dice, currentCard.transform);
                     CardDice.GetComponent<SpriteRenderer>().sortingOrder = 2;
                     // position the dice at the card's bottom left of the card (where the block/defence is displayed) and scale it up to be visible
-                    CardDice.transform.localPosition = new Vector3(1.85f, 2.1f, 0);
+                    CardDice.transform.localPosition = new Vector3(-1.85f, -2.1f, 0);
                     CardDice.transform.localScale = new Vector3(2, 2, 1);
 
                     // Roll the dice for the defence card and get the result

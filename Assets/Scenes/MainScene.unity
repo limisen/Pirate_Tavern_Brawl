@@ -1759,6 +1759,14 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1757921563}
+    - target: {fileID: 971686031045517218, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1044
+      objectReference: {fileID: 0}
+    - target: {fileID: 971686031045517218, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 930
+      objectReference: {fileID: 0}
     - target: {fileID: 5299481274044917755, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Name
       value: UI_canvas
