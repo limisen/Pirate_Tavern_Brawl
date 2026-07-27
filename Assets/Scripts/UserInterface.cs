@@ -9,6 +9,8 @@ public class UserInterface : MonoBehaviour
     [SerializeField] Animator purse;
     [SerializeField] Text player_health_counter;
     [SerializeField] Button confirmButton;
+    [SerializeField] Button TitleStartButton;
+    [SerializeField] Button TitleQuitButton;
     [SerializeField] GameObject BuyButtons;
 
     // Enemy stuffs
@@ -28,6 +30,7 @@ public class UserInterface : MonoBehaviour
     public void Start()
     {
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     public void UpdateUIText()
@@ -75,6 +78,33 @@ public class UserInterface : MonoBehaviour
             // Opponent is dead, You can stop gloating now. Head over to the bar!
             Debug.Log("changing camera to BarView");
             gameManager.cameraSwitch.SwitchToCamera("BarView");
+
+            // Adding the coin reward for winning the encounter
+            gameManager.coins_Available += 20;
+            // Updating UI to reflect the new value
+            gameManager.userInterface.UpdateUIText();
+
+            // Giving the opponent an new face
+            Debug.Log("Checking opponent's current face Sprite");
+            Debug.Log("CurrentFace: " + gameManager.CharacterFaceCurrentSprite.name);
+            for (int i = 0; i < gameManager.CharacterFaces.Count; i++)
+            {
+                Debug.Log(i);
+                if (i + 1 == gameManager.CharacterFaces.Count)
+                {
+                    Debug.Log("At end of CharacterFacesList...");
+                    Debug.Log("Changing Face of Opponent to: " + gameManager.CharacterFaces[0].name + ", first element in the list");
+                    gameManager.CharacterFaceObject.GetComponent<SpriteRenderer>().sprite = gameManager.CharacterFaces[0];
+                    break;
+                }
+                else if (gameManager.CharacterFaceCurrentSprite.name == gameManager.CharacterFaces[i].name)
+                {
+                    Debug.Log("Changing Face of Opponent to: " + gameManager.CharacterFaces[i + 1].name);
+                    gameManager.CharacterFaceObject.GetComponent<SpriteRenderer>().sprite = gameManager.CharacterFaces[i + 1];
+                    break;
+                }
+            }
+            gameManager.CharacterFaceCurrentSprite = gameManager.CharacterFaceObject.GetComponent<SpriteRenderer>().sprite;
         }
         else if (gameManager.player_HP <= 0)
         {
@@ -121,6 +151,19 @@ public class UserInterface : MonoBehaviour
         gameManager.health_drink_aquired = true;
     }
 
+    public void TitleStartButtonPressed()
+    {
+        Debug.Log("Title Start Button Pressed");
+        Debug.Log("Changing Camera To TableView");
+        cameraSwitch.SwitchToCamera("TableView");
+    }
+    public void TitleQuitButtonPressed()
+    {
+        Debug.Log("Title Quit Button Pressed");
+        Debug.Log("Quitting Game...");
+        Application.Quit();
+    }
+
     public void buyButtonTwo(Button buttonTwo)
     {
         Debug.Log("Buy Greed Drink");
@@ -135,7 +178,7 @@ public class UserInterface : MonoBehaviour
         Debug.Log("Buy Fury Drink");
         fury_drink.gameObject.SetActive(false);
         buttonThree.gameObject.SetActive(false);
-        
+
         gameManager.fury_drink_aquired = true;
     }
     public void doneWithCheckingResults()
