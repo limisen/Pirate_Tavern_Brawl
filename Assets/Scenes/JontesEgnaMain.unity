@@ -480,6 +480,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_Text
+      value: "Dread Grog, is brought to you by grupp B. \nSpecial thanks to our development
+        team featuring: \n\nLead art director: Gabriel  \n\nArt assistance: Kat 
+        \n\nDesign: Gabriel, Kat, Liam and Jonatan  \n\nLead programmer: Liam  \n\nUI
+        and animations: Gabriel + Jonatan \n\nCode assistance: Alvin and Sometimes
+        Jonatan \n\nMain scene structure: Liam \n\nGithub overlord: also Liam \n\nUnity
+        \"expert\": Liam \n\nPrimary crunch work: Liam (ofc) \n\nPlaytesters: Alvin
+        and Simon  \n\nIdea smasher: Simon  \n\nGame design evaluation: Simon \n\nTutorial
+        impelmentation: nobody... "
+      objectReference: {fileID: 0}
     - target: {fileID: 4397509001679166984, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Color.b
       value: 1
