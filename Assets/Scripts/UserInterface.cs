@@ -162,6 +162,14 @@ public class UserInterface : MonoBehaviour
         Debug.Log("Changing Camera To TableView");
         cameraSwitch.SwitchToCamera("TableView");
     }
+
+    public void TitleCreditsButtonPressed()
+    {
+        Debug.Log("Title Credits Button Pressed");
+        Debug.Log("Changing Camera To CreditsView");
+        cameraSwitch.SwitchToCamera("CreditsView");
+    }
+
     public void TitleQuitButtonPressed()
     {
         Debug.Log("Title Quit Button Pressed");

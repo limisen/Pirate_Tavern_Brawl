@@ -2026,6 +2026,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 930
       objectReference: {fileID: 0}
+    - target: {fileID: 1251987588190215922, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4245792568576577852, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -390
@@ -2077,6 +2081,10 @@ PrefabInstance:
     - target: {fileID: 7360346594655681818, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TitleStartButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525946061920301088, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_Name
+      value: Credits_Button
       objectReference: {fileID: 0}
     - target: {fileID: 7529900746828227978, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Pivot.x
@@ -2173,6 +2181,10 @@ PrefabInstance:
     - target: {fileID: 8433551216399191488, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Name
       value: Refresh_CardList_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743127017195039855, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 9057942389788211825, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Name
@@ -2581,6 +2593,11 @@ Transform:
   - {fileID: 184353435}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1924154875 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3118266847301939816, guid: bb6f0e8f2a19ee84aa4b2d1fef182b12, type: 3}
+  m_PrefabInstance: {fileID: 8951423681904993521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2061724969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,6 +2690,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &2085582892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2241862739932453383, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+  m_PrefabInstance: {fileID: 1465342021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4027046416949436615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2783,17 +2805,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1795025561}
     - target: {fileID: 4089171994351711173, guid: bb6f0e8f2a19ee84aa4b2d1fef182b12, type: 3}
+      propertyPath: CreditsView
+      value: 
+      objectReference: {fileID: 2085582892}
+    - target: {fileID: 4089171994351711173, guid: bb6f0e8f2a19ee84aa4b2d1fef182b12, type: 3}
       propertyPath: TopDownView
       value: 
       objectReference: {fileID: 1309694046}
-    - target: {fileID: 7672833045165887885, guid: bb6f0e8f2a19ee84aa4b2d1fef182b12, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672833045165887885, guid: bb6f0e8f2a19ee84aa4b2d1fef182b12, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 30
-      objectReference: {fileID: 0}
+    - target: {fileID: 4089171994351711173, guid: bb6f0e8f2a19ee84aa4b2d1fef182b12, type: 3}
+      propertyPath: camera_CreditsScreen
+      value: 
+      objectReference: {fileID: 1924154875}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -62,11 +62,13 @@ MonoBehaviour:
   camera_TopDown: {fileID: 6958215846208137344}
   camera_BarView: {fileID: 9125571858521112065}
   camera_TitleScreen: {fileID: 1174490946661722589}
+  camera_CreditsScreen: {fileID: 0}
   coin_purse: {fileID: 0}
   TableView: {fileID: 0}
   TopDownView: {fileID: 0}
   BarView: {fileID: 0}
   TitleView: {fileID: 0}
+  CreditsView: {fileID: 0}
   currentCamera: 
 --- !u!1001 &1209600558745063080
 PrefabInstance:
@@ -334,6 +336,14 @@ PrefabInstance:
     - target: {fileID: 2621628502228974646, guid: 957e2d1fa7efc92499ca27a99db61766, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305666018372777073, guid: 957e2d1fa7efc92499ca27a99db61766, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305666018372777073, guid: 957e2d1fa7efc92499ca27a99db61766, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4305666018372777073, guid: 957e2d1fa7efc92499ca27a99db61766, type: 3}
       propertyPath: m_LocalRotation.w
