@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public List<Sprite> CharacterFaces = new List<Sprite>();
     public Sprite CharacterFaceCurrentSprite;
 
-    public List<GameObject> opponentsCardList = new ();
+    public List<GameObject> opponentsCardList = new();
     public List<CardClass> opponentsChosenCards = new();
 
     public List<CardInteract> chosen_Cards = new(); // List of cards the player has chosen to play
@@ -72,9 +72,13 @@ public class GameManager : MonoBehaviour
 
             gameLoop.GameLoop_Method();
 
-            if (cameraSwitch.currentCamera == "CreditsCamera")
+        }
+        if (cameraSwitch.currentCamera == "CreditsCamera")
+        {
+            // scrolls the credits until out of frame
+            if (userInterface.creditstext.rectTransform.position != new Vector3(-17, 55.7f, 2))
             {
-                Debug.Log("KAMERAN FLYTTAS");
+
                 userInterface.creditstext.rectTransform.position += Vector3.up;
             }
         }
