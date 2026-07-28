@@ -36,7 +36,7 @@ public class UserInterface : MonoBehaviour
         gameManager = FindAnyObjectByType<GameManager>();
     }
 
-   
+
 
     public void UpdateUIText()
     {
@@ -114,6 +114,25 @@ public class UserInterface : MonoBehaviour
         else if (gameManager.player_HP <= 0)
         {
             Debug.Log("Player is dead, game over");
+
+            // resetting starting values so the player can start the first Encounter agian.
+            gameManager.coins_Available = 100;
+            gameManager.player_HP = 20;
+            gameManager.player_MaxHP = 20;
+            gameManager.opponent_HP = 20;
+            gameManager.opponent_MaxHP = 20;
+
+            UpdateUIText();
+
+            // Destroying all the cards in the card list
+            for (int i = 0; i < gameManager.populateCards.ParentObject.transform.childCount; i++)
+            {
+                Destroy(gameManager.populateCards.ParentObject.transform.GetChild(i).gameObject);
+            }
+
+            // Returning the player to TitleScreen
+            Debug.Log("Switcing camera to TitleScreen...");
+            gameManager.cameraSwitch.SwitchToCamera("TitleView");
         }
         else if (gameManager.opponent_HP > 0 && gameManager.player_HP > 0)
         {

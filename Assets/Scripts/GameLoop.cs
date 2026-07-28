@@ -65,6 +65,11 @@ public class GameLoop : MonoBehaviour
         //Player has confirmed they are ready to play their cards, switch camera to top down view
         if (gameManager.player_Ready == true)
         {
+            playerTotalDamage = 0;
+            playerTotalDefence = 0;
+            opponentTotalDamage = 0;
+            opponentTotalDefence = 0;
+
             // Log the starting total damage and total defence to the console (just to make sure they are zero before calculation)
             Debug.Log("Player's Starting Total Damage: " + playerTotalDamage);
             Debug.Log("Player's Starting Total Defence: " + playerTotalDefence);

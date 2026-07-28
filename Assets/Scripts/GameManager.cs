@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour
     public bool CreditsView = false;
 
     // starting values for the first Encounter
-    public int coins_Available = 50;
-    public int player_HP = 30;
-    public int player_MaxHP = 30;
-    public int opponent_HP = 30;
-    public int opponent_MaxHP = 30;
+    public int coins_Available = 100;
+    public int player_HP = 20;
+    public int player_MaxHP = 20;
+    public int opponent_HP = 20;
+    public int opponent_MaxHP = 20;
 
     public bool health_drink_aquired = false;
     public bool greed_drink_aquired = false;
@@ -71,16 +71,6 @@ public class GameManager : MonoBehaviour
             }
 
             gameLoop.GameLoop_Method();
-
-        }
-        if (cameraSwitch.currentCamera == "CreditsCamera")
-        {
-            // scrolls the credits until out of frame
-            if (userInterface.creditstext.rectTransform.position != new Vector3(-17, 55.7f, 2))
-            {
-
-                userInterface.creditstext.rectTransform.position += Vector3.up;
-            }
         }
     }
 
@@ -111,6 +101,18 @@ public class GameManager : MonoBehaviour
         {
             cameraSwitch.currentCamera = "CreditsCamera";
             cameraSwitch.SwitchToCamera("CreditsView");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (cameraSwitch.currentCamera == "CreditsCamera")
+        {
+            // scrolls the credits until out of frame
+            if (userInterface.creditstext.rectTransform.localPosition.y <= 55.7f)
+            {
+                userInterface.creditstext.rectTransform.localPosition += new Vector3(0, 0.1f, 0);
+            }
         }
     }
 }
