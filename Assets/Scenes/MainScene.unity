@@ -429,7 +429,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: player_HP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: opponent_HP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
+      propertyPath: player_MaxHP
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
@@ -438,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: coins_Available
-      value: 3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: CharacterFaceObject
@@ -446,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 238640403}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: CharacterFaces.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3428718693814189465, guid: f39fd5793f5e51f42bac86aaf3751fc0, type: 3}
       propertyPath: 'CharacterFaces.Array.data[0]'
@@ -648,6 +656,17 @@ Transform:
   - {fileID: 900908933}
   m_Father: {fileID: 1838613311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371444067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2780666725482416, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+  m_PrefabInstance: {fileID: 1465342021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea71fc8786ae7047918f86301476a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UserInterface
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1300,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &846989363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+  m_PrefabInstance: {fileID: 1465342021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
 --- !u!1001 &861345654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2007,6 +2037,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2780666725482416, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: creditstext
+      value: 
+      objectReference: {fileID: 846989363}
+    - target: {fileID: 2780666725482416, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1757921563}
@@ -2029,6 +2063,14 @@ PrefabInstance:
     - target: {fileID: 1251987588190215922, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624708237765208307, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -644
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232116900700227842, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4245792568576577852, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2061,6 +2103,10 @@ PrefabInstance:
     - target: {fileID: 5299481274044917755, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Name
       value: UI_canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413135121122489109, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 6928844766627780808, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_IsActive
@@ -2177,6 +2223,14 @@ PrefabInstance:
     - target: {fileID: 7623740896648822929, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Color.r
       value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899088106057341807, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 371444067}
+    - target: {fileID: 7899088106057341807, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TitleQuitButtonPressed
       objectReference: {fileID: 0}
     - target: {fileID: 8433551216399191488, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Name
