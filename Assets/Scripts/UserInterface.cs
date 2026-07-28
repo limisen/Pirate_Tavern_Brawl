@@ -224,8 +224,14 @@ public class UserInterface : MonoBehaviour
 
         // Reset the drink acquisition flags for the next encounter (otherwise the opponent HP will be reduced by 10 every time the player goes to the bar, even if they don't buy the drink)
         gameManager.health_drink_aquired = false;
-        gameManager.greed_drink_aquired = false;
         gameManager.fury_drink_aquired = false;
+        gameManager.greed_drink_aquired = false;
+
+        // For the future, IF the drinks should be able to be bought again
+        //health_drink.gameObject.SetActive(true);
+        //fury_drink.gameObject.SetActive(true);
+        //greed_drink.gameObject.SetActive(true);
+        //BuyButtons.SetActive(true);
 
         // Destroy all the cards in the card list before repopulating it
         for (int i = 0; i < gameManager.populateCards.ParentObject.transform.childCount; i++)

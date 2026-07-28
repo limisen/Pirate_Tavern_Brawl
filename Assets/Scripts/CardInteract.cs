@@ -83,14 +83,27 @@ public class CardInteract : MonoBehaviour
         }
         else if (CardSelected == false && onCard == false && is_in_playbox == true && cardClass.cardNoInteract == false && gameObject.transform.localScale == new Vector3(0.300000012f, 0.300000012f, 1))
         {// if the card is in the playbox and we are not hovering over it or holding down M1 on it, then add it to the array of cards to be played
-            Debug.Log("Card " + gameObject.name + " has been selected to be played");
-            gameManager.chosen_Cards.Add(this);
-            //Debug.Log("Card added to the array: " + gameManager.chosen_Cards);
+            if (gameManager.coins_Available - gameObject.GetComponent<CardClass>().Cost_of_Card >= 0)
+            {
+                Debug.Log("Card " + gameObject.name + " has been selected to be played");
+                gameManager.chosen_Cards.Add(this);
+                //Debug.Log("Card added to the array: " + gameManager.chosen_Cards);
 
-            gameObject.GetComponent<CardClass>().cardNoInteract = true; // make it so we cant interact with the card anymore
+                gameObject.GetComponent<CardClass>().cardNoInteract = true; // make it so we cant interact with the card anymore
 
-            gameManager.coins_Available -= gameObject.GetComponent<CardClass>().Cost_of_Card;
-            gameManager.userInterface.UpdateUIText();
+                gameManager.coins_Available -= gameObject.GetComponent<CardClass>().Cost_of_Card;
+                gameManager.userInterface.UpdateUIText();
+            }
+            else
+            {
+                Debug.Log("Player doesnt have enough gold to play " + gameObject.name + " that card costs: " + gameObject.GetComponent<CardClass>().Cost_of_Card + "Player only has: " + gameManager.coins_Available);
+
+                // return the card to it's starting position, scale and renderOrder
+                gameObject.transform.localScale = startLocalScale;
+                gameObject.transform.localRotation = startLocalRotation;
+                gameObject.transform.localPosition = startLocalPosition;
+                cardRenderer.sortingOrder = cardRendererStartingValue;
+            }
         }
         else if ((CardSelected == false || onCard == false || is_in_playbox == false) && cardClass.cardNoInteract == false) // if we arent hovering over a card or holding down M1 on it, return it to the scale, rotation and position it was at the start.
         {
