@@ -398,12 +398,12 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Dread Grog, is brought to you by grupp B. \nSpecial thanks to our development
-    team featuring: \n\nLead art director: Gabriel  \n\nArt assistance: Kat  Design:
+    team featuring: \n\nLead art director: Gabriel  \n\nArt assistance: Kat  \n\nDesign:
     Gabriel, Kat, Liam and Jonatan  \n\nLead programmer: Liam  \n\nUI and animations:
     Gabriel + Jonatan \n\nCode assistance: Alvin and Sometimes Jonatan \n\nMain scene
     structure: Liam \n\nGithub overlord: also Liam \n\nUnity \"expert\": Liam \n\nPrimary
     crunch work: Liam (ofc) \n\nPlaytesters: Alvin and Simon  \n\nIdea smasher: Simon 
-    \n\nGame design evaluation: Simon  "
+    \n\nGame design evaluation: Simon \n\nTutorial Implementation: Nobody... "
 --- !u!1 &1513939912944738719
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,87 +628,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &3141212318391971736
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4624366220984061105}
-  - component: {fileID: 3174870740125793131}
-  - component: {fileID: 6348800536925798469}
-  m_Layer: 0
-  m_Name: Text (Legacy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4624366220984061105
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3141212318391971736}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7195881512438729731}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3174870740125793131
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3141212318391971736}
-  m_CullTransparentMesh: 1
---- !u!114 &6348800536925798469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3141212318391971736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Buy a refill of cards
-
-    (Costs 6G)'
 --- !u!1 &3232116900700227842
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -762}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4993565565255170782
@@ -876,7 +795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -390}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3543386610684287181
@@ -1199,7 +1118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1001.8, y: 930.7}
+  m_AnchoredPosition: {x: 1044, y: 930}
   m_SizeDelta: {x: 64, y: 11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7072660404765566046
@@ -1367,10 +1286,10 @@ MonoBehaviour:
   purse: {fileID: 4234929097734674152}
   player_health_counter: {fileID: 4727602942528594923}
   confirmButton: {fileID: 7812113874020850686}
-  TitleStartButton: {fileID: 0}
-  TitleQuitButton: {fileID: 0}
+  TitleStartButton: {fileID: 7360346594655681818}
+  TitleQuitButton: {fileID: 7554446168943160592}
   BuyButtons: {fileID: 3543386610684287181}
-  creditstext: {fileID: 0}
+  creditstext: {fileID: 1973893591465086817}
   enemy_health_counter: {fileID: 4397509001679166984}
   health_drink: {fileID: 47104257081936542}
   greed_drink: {fileID: 331444340520929753}
@@ -1673,7 +1592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1746.8326, y: 739.8654}
+  m_AnchoredPosition: {x: 1758, y: 739.8654}
   m_SizeDelta: {x: 92, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &821963014540933206
@@ -1697,7 +1616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7254902, g: 0.9529412, b: 0.84313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1785,7 +1704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6694235691727053341
 Transform:
   m_ObjectHideFlags: 0
@@ -1948,7 +1867,7 @@ GameObject:
   - component: {fileID: 4833152872828280724}
   - component: {fileID: 1051682639937408351}
   m_Layer: 5
-  m_Name: Start_Button (1)
+  m_Name: Credits_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2423,7 +2342,7 @@ GameObject:
   - component: {fileID: 4631894431221612910}
   - component: {fileID: 7722367441068988025}
   m_Layer: 0
-  m_Name: Button (Legacy)
+  m_Name: Refresh_CardList_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2436,17 +2355,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8433551216399191488}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6999998, y: 2.6999998, z: 1}
+  m_LocalScale: {x: 2, y: 1.33, z: 0.66}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4624366220984061105}
+  m_Children: []
   m_Father: {fileID: 2298278407789126966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 503.5, y: 163}
+  m_AnchoredPosition: {x: 540, y: 163}
   m_SizeDelta: {x: 81.5, y: 56.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &609178633203832830
@@ -2477,8 +2395,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1711926529, guid: b0bfa92f6019895449c3656bcbfce06e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2602,7 +2520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7254902, g: 0.9529412, b: 0.84313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2688,7 +2606,7 @@ GameObject:
   - component: {fileID: 4642203169645448414}
   - component: {fileID: 7360346594655681818}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Start_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2710,7 +2628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6816682786150012336
@@ -2797,7 +2715,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2780666725482416}
         m_TargetAssemblyTypeName: UserInterface, Assembly-CSharp
-        m_MethodName: TitleButtonPressed
+        m_MethodName: TitleStartButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

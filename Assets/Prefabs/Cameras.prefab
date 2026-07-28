@@ -62,7 +62,7 @@ MonoBehaviour:
   camera_TopDown: {fileID: 6958215846208137344}
   camera_BarView: {fileID: 9125571858521112065}
   camera_TitleScreen: {fileID: 1174490946661722589}
-  camera_CreditsScreen: {fileID: 0}
+  camera_CreditsScreen: {fileID: 3118266847301939816}
   coin_purse: {fileID: 0}
   TableView: {fileID: 0}
   TopDownView: {fileID: 0}
@@ -316,6 +316,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb74e048a7db66e4eae567e146a0c69a, type: 3}
+--- !u!20 &3118266847301939816 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7439653239949952671, guid: bb74e048a7db66e4eae567e146a0c69a, type: 3}
+  m_PrefabInstance: {fileID: 5510358761950295287}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4026954666036365020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8906475157383623211, guid: bb74e048a7db66e4eae567e146a0c69a, type: 3}

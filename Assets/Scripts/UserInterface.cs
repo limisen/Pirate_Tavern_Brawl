@@ -147,7 +147,7 @@ public class UserInterface : MonoBehaviour
     {
         Debug.Log("Refill Cards button pressed");
 
-        if (gameManager.chosen_Cards.Count == 0)
+        if (gameManager.chosen_Cards.Count == 0 && !(gameManager.coins_Available - 6 < 0))
         {
             gameManager.coins_Available -= 6;
             gameManager.userInterface.UpdateUIText();

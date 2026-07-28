@@ -53,14 +53,24 @@ MonoBehaviour:
   tableView: 0
   topView: 0
   barView: 0
-  coins_Available: 50
-  player_HP: 30
-  player_MaxHP: 30
-  opponent_HP: 30
-  opponent_MaxHP: 30
+  TitleView: 0
+  CreditsView: 0
+  coins_Available: 100
+  player_HP: 20
+  player_MaxHP: 20
+  opponent_HP: 20
+  opponent_MaxHP: 20
   health_drink_aquired: 0
   greed_drink_aquired: 0
   fury_drink_aquired: 0
+  CharacterFaceObject: {fileID: 0}
+  CharacterFaces:
+  - {fileID: -1457566712, guid: 33c9bf8ca35582c469618a2690f8c45a, type: 3}
+  - {fileID: 2030671512, guid: c43361ce21d846340bbe5f4a69a1bb20, type: 3}
+  - {fileID: 1196651229, guid: 4432a4d4f1e38e8488ea74cc9ea16071, type: 3}
+  - {fileID: -1711012825, guid: 16348077970733f4791cb0f1bf2c2793, type: 3}
+  - {fileID: -573849608, guid: 277e935afce47614884701a626d52cc4, type: 3}
+  CharacterFaceCurrentSprite: {fileID: 0}
   opponentsCardList: []
   opponentsChosenCards: []
   chosen_Cards: []
@@ -93,7 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerReady
   playerPlayArea: {fileID: 0}
   opponentPlayArea: {fileID: 0}
-  startPos: {x: -7.6, y: 1.6, z: 0}
+  startPlayerCardPos: {x: -7.6, y: 1.6, z: 0}
+  startOpponentCardPos: {x: -7.8, y: -2, z: 0}
   cardSpacing: {x: 2, y: 0, z: 0}
   cardScale: {x: 0.37, y: 0.37, z: 1}
 --- !u!114 &1644976103253864655
@@ -109,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopulateCardList
   ParentObject: {fileID: 0}
+  OpponentParentObject: {fileID: 0}
   AttackCardPrefab: {fileID: 4202990657420990820, guid: c9fe35c4c98f7b444b6965ce8d08c806, type: 3}
   AttackCardPortrait:
   - {fileID: 867309792, guid: 7547161a4490fb64b8b62d0f4af505b7, type: 3}

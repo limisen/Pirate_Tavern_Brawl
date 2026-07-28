@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
         if (cameraSwitch.currentCamera == "CreditsCamera")
         {
             // scrolls the credits until out of frame
-            if (userInterface.creditstext.rectTransform.localPosition.y <= 55.7f)
+            if (userInterface.creditstext.rectTransform.localPosition.y <= 66f)
             {
                 userInterface.creditstext.rectTransform.localPosition += new Vector3(0, 0.1f, 0);
             }
