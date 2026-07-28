@@ -344,7 +344,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348831221410177117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 0.06666667, y: 0.11764706, z: 0.125}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -352,8 +352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61.873337, y: -76.12941}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -16.99, y: -39.09}
+  m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4453526700319824860
 CanvasRenderer:
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.28862584, g: 0.8867924, b: 0.53961164, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -385,18 +385,24 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 18
+    m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 2
+    m_MaxSize: 300
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "Dread Grog, is brought to you by grupp B. \nSpecial thanks to our development
+    team featuring: \n\nLead art director: Gabriel  \n\nArt assistance: Kat  Design:
+    Gabriel, Kat, Liam and Jonatan  \n\nLead programmer: Liam  \n\nUI and animations:
+    Gabriel + Jonatan \n\nCode assistance: Alvin and Sometimes Jonatan \n\nMain scene
+    structure: Liam \n\nGithub overlord: also Liam \n\nUnity \"expert\": Liam \n\nPrimary
+    crunch work: Liam (ofc) \n\nPlaytesters: Alvin and Simon  \n\nIdea smasher: Simon 
+    \n\nGame design evaluation: Simon  "
 --- !u!1 &1513939912944738719
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,8 +561,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 928.1, y: 647.1, z: 0}
-  m_LocalScale: {x: 15, y: 8.5, z: 8}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 51.2, y: 29.013334, z: 27.306667}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5413135121122489109}
   m_Father: {fileID: 7529900746828227978}
@@ -1230,6 +1236,7 @@ MonoBehaviour:
   TitleStartButton: {fileID: 0}
   TitleQuitButton: {fileID: 0}
   BuyButtons: {fileID: 3543386610684287181}
+  creditstext: {fileID: 0}
   enemy_health_counter: {fileID: 4397509001679166984}
   health_drink: {fileID: 47104257081936542}
   greed_drink: {fileID: 331444340520929753}

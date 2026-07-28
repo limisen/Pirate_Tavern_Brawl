@@ -480,72 +480,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_Text
-      value: "Dread Grog, is brought to you by grupp B. \nSpecial thanks to our development
-        team featuring: \n\nLead art director: Gabriel  \n\nArt assistance: Kat 
-        Design: Gabriel, Kat, Liam and Jonatan  \n\nLead programmer: Liam  \n\nUI
-        and animations: Gabriel + Jonatan \n\nCode assistance: Alvin and Sometimes
-        Jonatan \n\nMain scene structure: Liam \n\nGithub overlord: also Liam \n\nUnity
-        \"expert\": Liam \n\nPrimary crunch work: Liam (ofc) \n\nPlaytesters: Alvin
-        and Simon  \n\nIdea smasher: Simon  \n\nGame design evaluation: Simon  "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_Color.b
-      value: 0.53961164
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8867924
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_Color.r
-      value: 0.28862584
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973893591465086817, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_FontData.m_VerticalOverflow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3601287022511224883, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 51.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3601287022511224883, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 29.013334
-      objectReference: {fileID: 0}
-    - target: {fileID: 3601287022511224883, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 27.306667
-      objectReference: {fileID: 0}
-    - target: {fileID: 3601287022511224883, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4397509001679166984, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -561,26 +495,6 @@ PrefabInstance:
     - target: {fileID: 5299481274044917755, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_Name
       value: UI_canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5413135121122489109, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 5413135121122489109, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5413135121122489109, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5413135121122489109, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -16.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 5413135121122489109, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -39.09
       objectReference: {fileID: 0}
     - target: {fileID: 7355108421803655827, guid: 48904a54eddb7164da010ef4438ce7ce, type: 3}
       propertyPath: m_IsActive
