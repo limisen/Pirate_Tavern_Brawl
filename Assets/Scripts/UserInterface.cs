@@ -13,6 +13,9 @@ public class UserInterface : MonoBehaviour
     [SerializeField] Button TitleQuitButton;
     [SerializeField] GameObject BuyButtons;
 
+    [SerializeField] public Text creditstext;
+
+
     // Enemy stuffs
     [SerializeField] Text enemy_health_counter;
 
@@ -32,6 +35,8 @@ public class UserInterface : MonoBehaviour
         cameraSwitch = FindAnyObjectByType<CameraSwitch>();
         gameManager = FindAnyObjectByType<GameManager>();
     }
+
+   
 
     public void UpdateUIText()
     {

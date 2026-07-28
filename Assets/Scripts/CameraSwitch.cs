@@ -7,12 +7,14 @@ public class CameraSwitch : MonoBehaviour
     [SerializeField] Camera camera_TopDown;
     [SerializeField] Camera camera_BarView;
     [SerializeField] Camera camera_TitleScreen;
+    [SerializeField] Camera camera_CreditsScreen;
     [SerializeField] GameObject coin_purse;
     [SerializeField] GameObject TableView;
     [SerializeField] GameObject TopDownView;
     [SerializeField] GameObject BarView;
     [SerializeField] GameObject TitleView;
-
+    [SerializeField] GameObject CreditsView;
+ 
     public string currentCamera;
     public void SwitchToCamera(string CameraToSwitchTo)
     {
@@ -30,6 +32,9 @@ public class CameraSwitch : MonoBehaviour
         TitleView.gameObject.SetActive(false);
 
         coin_purse.gameObject.SetActive(false);
+        
+        camera_CreditsScreen.gameObject.SetActive(false);
+        CreditsView.gameObject.SetActive(false);
 
         if (CameraToSwitchTo == "TableView")
         {
@@ -63,6 +68,15 @@ public class CameraSwitch : MonoBehaviour
             currentCamera = "TitleCamera";
             TitleView.gameObject.SetActive(true);
         }
+
+        else if (CameraToSwitchTo == "CreditsView")
+        {
+            camera_CreditsScreen.enabled = true;
+            camera_CreditsScreen.gameObject.SetActive(true);
+            currentCamera = "CreditsCamera";
+            CreditsView.gameObject.SetActive(true);
+        }
+
         Debug.Log("Current Camera: " + currentCamera);
     }
 }

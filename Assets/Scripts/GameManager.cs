@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public bool topView = false;
     public bool barView = false;
     public bool TitleView = false;
+    public bool CreditsView = false;
 
     // starting values for the first Encounter
     public int coins_Available = 50;
@@ -68,8 +69,14 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("Player has lost the game, Please restart");
             }
-            
+
             gameLoop.GameLoop_Method();
+
+            if (cameraSwitch.currentCamera == "CreditsCamera")
+            {
+                Debug.Log("KAMERAN FLYTTAS");
+                userInterface.creditstext.rectTransform.position += Vector3.up;
+            }
         }
     }
 
@@ -95,6 +102,11 @@ public class GameManager : MonoBehaviour
         {
             cameraSwitch.currentCamera = "TitleCamera";
             cameraSwitch.SwitchToCamera("TitleView");
+        }
+        if (CreditsView == true)
+        {
+            cameraSwitch.currentCamera = "CreditsCamera";
+            cameraSwitch.SwitchToCamera("CreditsView");
         }
     }
 }
