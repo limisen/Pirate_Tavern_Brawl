@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public bool tableView = false;
     public bool topView = false;
     public bool barView = false;
+    public bool TitleView = false;
 
     // starting values for the first Encounter
     public int coins_Available = 50;
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour
     public bool health_drink_aquired = false;
     public bool greed_drink_aquired = false;
     public bool fury_drink_aquired = false;
+
+    [SerializeField] public GameObject CharacterFaceObject;
+    [SerializeField] public List<Sprite> CharacterFaces = new List<Sprite>();
+    public Sprite CharacterFaceCurrentSprite;
 
     public List<GameObject> opponentsCardList = new ();
     public List<CardClass> opponentsChosenCards = new();
@@ -40,27 +45,31 @@ public class GameManager : MonoBehaviour
         gameLoop = FindAnyObjectByType<GameLoop>();
         d6_DiceRollScript = FindAnyObjectByType<D6_DiceRoll>();
         populateCards = FindAnyObjectByType<PopulateCards>();
+        CharacterFaceCurrentSprite = CharacterFaceObject.GetComponent<SpriteRenderer>().sprite;
 
-        populateCards.PopulateCardList();
-        opponentsCardList = populateCards.PopulateOpponentCards();
+        CharacterFaceCurrentSprite = CharacterFaces[0];
 
         userInterface.UpdateUIText();
 
-        cameraSwitch.SwitchToCamera("TableView");
+        cameraSwitch.SwitchToCamera("TitleView");
     }
     void Update()
     {
-        gameLoop.GameLoop_Method();
-
-        // Refill the Player's card list if it is empty
-        if (populateCards.ParentObject.transform.childCount == 0 && cameraSwitch.currentCamera == "TableCamera")
+        if (cameraSwitch.currentCamera == "TableCamera" || cameraSwitch.currentCamera == "TopCamera")
         {
-            populateCards.PopulateCardList();
-        }
+            // Refill the Player's card list if it is empty
+            if (populateCards.ParentObject.transform.childCount == 0)
+            {
+                populateCards.PopulateCardList();
+                opponentsCardList = populateCards.PopulateOpponentCards();
+            }
 
-        if (player_HP <= 0)
-        {
-            Debug.Log("Player has lost the game, Please restart");
+            if (player_HP <= 0)
+            {
+                Debug.Log("Player has lost the game, Please restart");
+            }
+            
+            gameLoop.GameLoop_Method();
         }
     }
 
@@ -81,6 +90,11 @@ public class GameManager : MonoBehaviour
         {
             cameraSwitch.currentCamera = "BarCamera";
             cameraSwitch.SwitchToCamera("BarView");
+        }
+        if (TitleView == true)
+        {
+            cameraSwitch.currentCamera = "TitleCamera";
+            cameraSwitch.SwitchToCamera("TitleView");
         }
     }
 }
